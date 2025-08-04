@@ -1,24 +1,27 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const jetbrainsMono = JetBrains_Mono({ 
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
 
 export const metadata: Metadata = {
-  title: 'Paola Gisler - Creative Technologist',
-  description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
-  keywords: ['Paola Gisler', 'Creative Technologist', 'Python', 'Web3', 'Film Production', 'Operations'],
+  title: 'Paola Gisler | Developer & Automation Specialist',
+  description: 'Full-stack developer specializing in Python, Web3, and process automation. Building the future of decentralized applications.',
+  keywords: 'developer, python, web3, blockchain, automation, full-stack, cryptocurrency, defi',
   authors: [{ name: 'Paola Gisler' }],
   openGraph: {
-    title: 'Paola Gisler - Creative Technologist',
-    description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
+    title: 'Paola Gisler | Developer & Automation Specialist',
+    description: 'Full-stack developer specializing in Python, Web3, and process automation.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Paola Gisler - Creative Technologist',
-    description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
+    title: 'Paola Gisler | Developer & Automation Specialist',
+    description: 'Full-stack developer specializing in Python, Web3, and process automation.',
   },
 }
 
@@ -28,9 +31,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        {children}
+    <html lang="en" className="dark">
+      <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
+        <div className="min-h-screen bg-gradient-to-br from-background via-background to-slate-950">
+          {children}
+        </div>
       </body>
     </html>
   )
