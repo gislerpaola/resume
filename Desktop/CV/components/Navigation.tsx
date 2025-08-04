@@ -1,125 +1,190 @@
-'use client'
+"use client"
 
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { motion, useScroll, useTransform } from "framer-motion"
+import { useState, useEffect } from "react"
+import { Menu, X, Film, User, Briefcase, Code, Heart, Mail } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const navItems = [
-  { href: '#hero', label: 'Home' },
-  { href: '#journey', label: 'Journey' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#manifesto', label: 'Manifesto' },
-  { href: '#contact', label: 'Contact' },
+  { label: "About", href: "#hero", icon: <User size={16} /> },
+  { label: "Experience", href: "#experience", icon: <Briefcase size={16} /> },
+  { label: "Skills", href: "#skills", icon: <Code size={16} /> },
+  { label: "Portfolio", href: "#projects", icon: <Film size={16} /> },
+  { label: "Manifesto", href: "#manifesto", icon: <Heart size={16} /> },
+  { label: "Contact", href: "#footer", icon: <Mail size={16} /> },
 ]
 
 export function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("hero")
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [0, 100], [0, 1])
+  const backdropBlur = useTransform(scrollY, [0, 100], [0, 20])
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      const sections = navItems.map(item => item.href.replace('#', ''))
+      const scrollPosition = window.scrollY + 100
+
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section)
+            break
+          }
+        }
+      }
     }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const scrollToSection = (href: string) => {
+    const element = document.getElementById(href.replace('#', ''))
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsOpen(false)
+  }
+
   return (
     <>
-      <motion.header
-        className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-          isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
-        )}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+      {/* Desktop Navigation */}
+      <motion.nav
+        style={{ 
+          opacity,
+          backdropFilter: `blur(${backdropBlur}px)`,
+        }}
+        className="fixed top-0 left-0 right-0 z-50 bg-black/70 border-b border-cinematic-gold/20 hidden md:block"
       >
-        <nav className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
             <motion.div
-              className="text-xl font-semibold text-gray-900"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => scrollToSection('#hero')}
             >
-              <a href="#hero">PG</a>
+              <Film className="w-6 h-6 text-cinematic-gold" />
+              <span className="font-serif text-xl font-bold text-white">
+                Paola Gisler
+              </span>
             </motion.div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            {/* Navigation items */}
+            <div className="flex items-center gap-8">
               {navItems.map((item) => (
-                <motion.a
+                <motion.button
                   key={item.href}
-                  href={item.href}
-                  className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm font-medium"
-                  whileHover={{ y: -2 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300 ${
+                    activeSection === item.href.replace('#', '')
+                      ? 'text-cinematic-gold bg-cinematic-gold/10'
+                      : 'text-gray-300 hover:text-cinematic-gold hover:bg-cinematic-gold/5'
+                  }`}
                 >
-                  {item.label}
-                </motion.a>
+                  {item.icon}
+                  <span className="font-medium">{item.label}</span>
+                </motion.button>
               ))}
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle mobile menu"
-            >
-              <motion.div
-                animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {isMobileMenuOpen ? (
-                  <X className="w-6 h-6 text-gray-900" />
-                ) : (
-                  <Menu className="w-6 h-6 text-gray-900" />
-                )}
-              </motion.div>
-            </button>
           </div>
-        </nav>
-      </motion.header>
+        </div>
+      </motion.nav>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
+      {/* Mobile Navigation */}
+      <motion.div
+        style={{ opacity }}
+        className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-lg border-b border-cinematic-gold/20 md:hidden"
+      >
+        <div className="flex items-center justify-between h-16 px-4">
+          {/* Mobile logo */}
           <motion.div
-            className="fixed inset-0 z-40 md:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center gap-2 cursor-pointer"
+            onClick={() => scrollToSection('#hero')}
           >
-            <div className="absolute inset-0 bg-black/20" onClick={() => setIsMobileMenuOpen(false)} />
-            <motion.div
-              className="absolute top-0 right-0 w-64 h-full bg-white shadow-xl"
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            >
-              <div className="pt-20 px-6">
-                {navItems.map((item, index) => (
-                  <motion.a
-                    key={item.href}
-                    href={item.href}
-                    className="block py-4 text-gray-900 hover:text-gray-600 transition-colors duration-200"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    {item.label}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
+            <Film className="w-6 h-6 text-cinematic-gold" />
+            <span className="font-serif text-lg font-bold text-white">
+              Paola Gisler
+            </span>
           </motion.div>
-        )}
-      </AnimatePresence>
+
+          {/* Mobile menu button */}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-cinematic-gold hover:bg-cinematic-gold/10"
+          >
+            <motion.div
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </motion.div>
+          </Button>
+        </div>
+
+        {/* Mobile menu */}
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ 
+            opacity: isOpen ? 1 : 0, 
+            height: isOpen ? 'auto' : 0 
+          }}
+          transition={{ duration: 0.3 }}
+          className="overflow-hidden bg-black/95 backdrop-blur-lg"
+        >
+          <div className="py-4 space-y-2">
+            {navItems.map((item, index) => (
+              <motion.button
+                key={item.href}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ 
+                  opacity: isOpen ? 1 : 0, 
+                  x: isOpen ? 0 : -20 
+                }}
+                transition={{ delay: index * 0.05 }}
+                onClick={() => scrollToSection(item.href)}
+                className={`w-full flex items-center gap-3 px-6 py-3 text-left transition-all duration-300 ${
+                  activeSection === item.href.replace('#', '')
+                    ? 'text-cinematic-gold bg-cinematic-gold/10 border-r-2 border-cinematic-gold'
+                    : 'text-gray-300 hover:text-cinematic-gold hover:bg-cinematic-gold/5'
+                }`}
+              >
+                {item.icon}
+                <span className="font-medium">{item.label}</span>
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Floating scroll progress indicator */}
+      <motion.div
+        style={{ opacity }}
+        className="fixed bottom-8 right-8 z-40 hidden lg:block"
+      >
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          className="w-16 h-16 rounded-full bg-gradient-to-r from-cinematic-gold to-cinematic-bronze p-[2px]"
+        >
+          <div className="w-full h-full bg-black rounded-full flex items-center justify-center">
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            >
+              <Film className="w-6 h-6 text-cinematic-gold" />
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.div>
     </>
   )
 }
