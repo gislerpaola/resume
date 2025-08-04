@@ -1,19 +1,24 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Paola Gisler - Creative Storyteller & Tech Builder',
-  description: 'From film sets to code: Building the future at the intersection of storytelling, crypto, and tech.',
-  keywords: 'Paola Gisler, Film Director, Web3 Developer, Blockchain, Python, Operations, Creative Technologist',
+  title: 'Paola Gisler - Creative Technologist',
+  description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
+  keywords: ['Paola Gisler', 'Creative Technologist', 'Python', 'Web3', 'Film Production', 'Operations'],
   authors: [{ name: 'Paola Gisler' }],
   openGraph: {
-    title: 'Paola Gisler - Creative Storyteller & Tech Builder',
-    description: 'From film sets to code: Building the future at the intersection of storytelling, crypto, and tech.',
+    title: 'Paola Gisler - Creative Technologist',
+    description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
     type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Paola Gisler - Creative Technologist',
+    description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
   },
 }
 
@@ -24,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
