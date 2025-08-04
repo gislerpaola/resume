@@ -1,21 +1,21 @@
-import Navigation from '@/components/navigation'
-import HeroSection from '@/components/sections/hero-section'
-import ExperienceSection from '@/components/sections/experience-section'
-import SkillsSection from '@/components/sections/skills-section'
-import ProjectsSection from '@/components/sections/projects-section'
-import ManifestoSection from '@/components/sections/manifesto-section'
-import FooterSection from '@/components/sections/footer-section'
+import { Hero } from '@/components/Hero'
+import { Journey } from '@/components/Journey'
+import { Skills } from '@/components/Skills'
+import { Projects } from '@/components/Projects'
+import { Manifesto } from '@/components/Manifesto'
+import { Contact } from '@/components/Contact'
+import { Navigation } from '@/components/Navigation'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <main className="min-h-screen bg-white">
       <Navigation />
-      <HeroSection />
-      <ExperienceSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <ManifestoSection />
-      <FooterSection />
+      <Hero />
+      <Journey />
+      <Skills />
+      <Projects />
+      <Manifesto />
+      <Contact />
     </main>
   )
 }
