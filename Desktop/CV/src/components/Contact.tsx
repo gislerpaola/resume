@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from '@/components/hooks/useInView'
+import { useInView } from '@/src/components/hooks/useInView'
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react'
 import { useState } from 'react'
 
