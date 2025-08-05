@@ -68,7 +68,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
@@ -269,19 +269,28 @@ export default function HomePage() {
 
       {/* Background Effects */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        {/* Subtle Gradient Orbs */}
+        <div className="absolute top-1/3 left-1/5 w-96 h-96 bg-primary/3 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/3 right-1/5 w-96 h-96 bg-cyan-500/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-2/3 left-2/3 w-64 h-64 bg-blue-500/2 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '6s' }} />
         
-        {/* Grid Pattern */}
+        {/* Subtle Grid Pattern */}
         <div 
-          className="absolute inset-0 opacity-[0.02]"
+          className="absolute inset-0 opacity-[0.015]"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(124, 58, 237, 0.1) 1px, transparent 1px)
+              linear-gradient(rgba(124, 58, 237, 0.08) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(124, 58, 237, 0.08) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px'
+            backgroundSize: '60px 60px'
+          }}
+        />
+        
+        {/* Clean noise texture */}
+        <div 
+          className="absolute inset-0 opacity-[0.01]"
+          style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E")'
           }}
         />
       </div>
