@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from '@/components/hooks/useInView'
+import { useInView } from '@/src/components/hooks/useInView'
 import { Lightbulb, Target, Zap, Heart } from 'lucide-react'
 
 const principles = [

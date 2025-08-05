@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useInView } from '@/components/hooks/useInView'
+import { useInView } from '@/src/components/hooks/useInView'
 import { Code, Database, Cog, Film, Globe, Zap } from 'lucide-react'
 
 const skillCategories = [
