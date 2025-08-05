@@ -2,7 +2,7 @@ name: Deploy Resume Website to GitHub Pages
 
 on:
   push:
-    branches: [ version-4-clean-developer ]
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
