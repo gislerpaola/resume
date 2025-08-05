@@ -22,7 +22,7 @@ export function FooterSection() {
             className="space-y-6"
           >
             <div>
-              <h3 className="font-serif text-3xl font-bold text-cinematic-gold mb-2">
+              <h3 className="font-serif text-3xl font-bold text-yellow-400 mb-2">
                 Paola Gisler
               </h3>
               <p className="text-gray-300 text-lg">
@@ -31,18 +31,18 @@ export function FooterSection() {
             </div>
             
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-300 hover:text-cinematic-gold transition-colors duration-300">
-                <MapPin size={18} className="text-cinematic-gold" />
+              <div className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                <MapPin size={18} className="text-yellow-400" />
                 <span>Kuala Lumpur, Malaysia</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-300 hover:text-cinematic-gold transition-colors duration-300">
-                <Mail size={18} className="text-cinematic-gold" />
+              <div className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                <Mail size={18} className="text-yellow-400" />
                 <a href="mailto:gislerpaola@gmail.com" className="hover:underline">
                   gislerpaola@gmail.com
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-gray-300 hover:text-cinematic-gold transition-colors duration-300">
-                <Phone size={18} className="text-cinematic-gold" />
+              <div className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition-colors duration-300">
+                <Phone size={18} className="text-yellow-400" />
                 <a href="tel:+60184024695" className="hover:underline">
                   +60184024695
                 </a>
@@ -76,7 +76,7 @@ export function FooterSection() {
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ x: 10 }}
-                  className="block text-gray-300 hover:text-cinematic-gold transition-all duration-300"
+                  className="block text-gray-300 hover:text-yellow-400 transition-all duration-300"
                 >
                   {link.label}
                 </motion.a>
@@ -101,7 +101,7 @@ export function FooterSection() {
                 variant="outline"
                 size="icon"
                 asChild
-                className="border-cinematic-gold/30 hover:border-cinematic-gold hover:bg-cinematic-gold hover:text-black transition-all duration-300"
+                className="border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300"
               >
                 <a href="https://www.linkedin.com/in/paolagisler" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={20} />
@@ -111,7 +111,7 @@ export function FooterSection() {
                 variant="outline"
                 size="icon"
                 asChild
-                className="border-cinematic-gold/30 hover:border-cinematic-gold hover:bg-cinematic-gold hover:text-black transition-all duration-300"
+                className="border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300"
               >
                 <a href="https://github.com/gislerpaola" target="_blank" rel="noopener noreferrer">
                   <Github size={20} />
@@ -121,7 +121,7 @@ export function FooterSection() {
                 variant="outline"
                 size="icon"
                 asChild
-                className="border-cinematic-gold/30 hover:border-cinematic-gold hover:bg-cinematic-gold hover:text-black transition-all duration-300"
+                className="border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300"
               >
                 <a href="mailto:gislerpaola@gmail.com">
                   <Mail size={20} />
@@ -134,7 +134,7 @@ export function FooterSection() {
                 Ready to collaborate on your next project?
               </p>
               <Button 
-                variant="cinematic" 
+                variant="default" 
                 className="w-full"
                 onClick={() => window.open('mailto:gislerpaola@gmail.com', '_blank')}
               >
@@ -145,7 +145,7 @@ export function FooterSection() {
           </motion.div>
         </div>
 
-        <Separator className="bg-cinematic-gold/20 mb-8" />
+        <Separator className="bg-yellow-400/20 mb-8" />
 
         {/* Bottom footer */}
         <motion.div
@@ -156,13 +156,13 @@ export function FooterSection() {
           className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400"
         >
           <div className="flex items-center gap-2">
-            <Film size={16} className="text-cinematic-gold" />
+            <Film size={16} className="text-yellow-400" />
             <span>© 2024 Paola Gisler. Crafted with passion and precision.</span>
           </div>
           
           <div className="flex items-center gap-1">
             <span>Made with</span>
-            <Heart size={14} className="text-cinematic-gold mx-1" />
+            <Heart size={14} className="text-yellow-400 mx-1" />
             <span>using Next.js & Framer Motion</span>
           </div>
         </motion.div>
@@ -173,7 +173,7 @@ export function FooterSection() {
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
           className="absolute top-4 right-4 w-16 h-16 opacity-10"
         >
-          <Film size={64} className="text-cinematic-gold" />
+          <Film size={64} className="text-yellow-400" />
         </motion.div>
       </div>
     </footer>

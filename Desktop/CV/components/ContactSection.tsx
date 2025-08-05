@@ -112,7 +112,7 @@ export default function ContactSection() {
             ./get-in-touch
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Ready to collaborate on your next project? Let's discuss how automation, 
+            Ready to collaborate on your next project? Let&apos;s discuss how automation, 
             Web3 development, or data analysis can solve your challenges.
           </p>
         </motion.div>
@@ -124,46 +124,7 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-8"
           >
-            {/* Terminal Display */}
-            <div className="terminal-window">
-              <div className="terminal-header">
-                <div className="flex items-center space-x-2">
-                  <div className="terminal-dot bg-red-500"></div>
-                  <div className="terminal-dot bg-yellow-500"></div>
-                  <div className="terminal-dot bg-green-500"></div>
-                </div>
-                <div className="flex-1 text-center">
-                  <span className="text-terminal-text text-sm font-mono">
-                    contact@paola-portfolio
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <Terminal className="w-4 h-4 text-terminal-text" />
-                </div>
-              </div>
-              <div className="terminal-content min-h-[300px]">
-                <div className="space-y-1">
-                  {terminalCommands.map((cmd, index) => (
-                    <div
-                      key={index}
-                      className={`
-                        transition-opacity duration-300 font-mono text-sm
-                        ${visibleCommands.includes(index) ? 'opacity-100' : 'opacity-0'}
-                        ${cmd.isOutput ? 'text-terminal-green pl-4' : 'text-terminal-text'}
-                      `}
-                    >
-                      {!cmd.isOutput && (
-                        <span className="text-terminal-blue">guest@portfolio:~$ </span>
-                      )}
-                      {cmd.command}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             {/* Contact Details */}
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
@@ -211,7 +172,7 @@ export default function ContactSection() {
                   Send Message
                 </CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you within 24 hours.
+                  Fill out the form below and I&apos;ll get back to you within 24 hours.
                 </CardDescription>
               </CardHeader>
               <CardContent>

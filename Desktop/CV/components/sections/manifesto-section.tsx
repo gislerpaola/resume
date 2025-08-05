@@ -46,8 +46,8 @@ export function ManifestoSection() {
     <section className="relative py-20 bg-gradient-to-b from-black via-film-projection to-black overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cinematic-gold/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cinematic-bronze/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-600/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4">
@@ -63,7 +63,7 @@ export function ManifestoSection() {
               MY MANIFESTO
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cinematic-gold to-cinematic-bronze mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             "From coordinating A-list casts on Hollywood sets to optimizing fintech operations 
             in Southeast Asia, I've learned that great work transcends industries. 
@@ -87,8 +87,8 @@ export function ManifestoSection() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="bg-gradient-to-br from-cinematic-gold/10 to-cinematic-bronze/10 p-8 rounded-xl border border-cinematic-gold/20 backdrop-blur-sm">
-              <h3 className="font-serif text-3xl font-bold text-cinematic-gold mb-6">
+            <div className="bg-gradient-to-br from-yellow-400/10 to-yellow-600/10 p-8 rounded-xl border border-yellow-400/20 backdrop-blur-sm">
+              <h3 className="font-serif text-3xl font-bold text-yellow-400 mb-6">
                 The Journey Continues
               </h3>
               <div className="space-y-4 text-gray-300 leading-relaxed">
@@ -132,17 +132,17 @@ export function ManifestoSection() {
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, x: 10 }}
-                className="flex items-start gap-4 p-6 bg-gradient-to-r from-film-noir to-black rounded-lg border border-cinematic-gold/10 hover:border-cinematic-gold/30 transition-all duration-300 group"
+                className="flex items-start gap-4 p-6 bg-gradient-to-r from-film-noir to-black rounded-lg border border-yellow-400/10 hover:border-yellow-400/30 transition-all duration-300 group"
               >
                 <motion.div
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                  className="text-cinematic-gold group-hover:text-cinematic-bronze transition-colors duration-300"
+                  className="text-yellow-400 group-hover:text-yellow-600 transition-colors duration-300"
                 >
                   {point.icon}
                 </motion.div>
                 <div>
-                  <h4 className="font-semibold text-white mb-2 group-hover:text-cinematic-gold transition-colors duration-300">
+                  <h4 className="font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
                     {point.title}
                   </h4>
                   <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">
@@ -162,7 +162,7 @@ export function ManifestoSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-cinematic-gold/10 to-cinematic-bronze/10 p-12 rounded-2xl border border-cinematic-gold/20 backdrop-blur-sm">
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-yellow-400/10 to-yellow-600/10 p-12 rounded-2xl border border-yellow-400/20 backdrop-blur-sm">
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
@@ -173,7 +173,7 @@ export function ManifestoSection() {
                 success comes from understanding that every detail matters, 
                 every person contributes, and every challenge is an opportunity to innovate."
               </blockquote>
-              <cite className="text-cinematic-gold font-semibold text-lg">
+              <cite className="text-yellow-400 font-semibold text-lg">
                 — Paola Gisler
               </cite>
             </motion.div>
@@ -197,7 +197,7 @@ export function ManifestoSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              variant="cinematic" 
+              variant="default" 
               size="lg"
               className="text-lg px-8 py-4"
               onClick={() => window.open('mailto:gislerpaola@gmail.com', '_blank')}
@@ -208,7 +208,7 @@ export function ManifestoSection() {
             <Button 
               variant="outline" 
               size="lg"
-              className="text-lg px-8 py-4 border-cinematic-gold text-cinematic-gold hover:bg-cinematic-gold hover:text-black"
+              className="text-lg px-8 py-4 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
               onClick={() => window.open('https://www.linkedin.com/in/paolagisler', '_blank')}
             >
               <Globe className="mr-2" size={20} />

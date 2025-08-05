@@ -58,7 +58,7 @@ export function Navigation() {
           opacity,
           backdropFilter: `blur(${backdropBlur}px)`,
         }}
-        className="fixed top-0 left-0 right-0 z-50 bg-black/70 border-b border-cinematic-gold/20 hidden md:block"
+        className="fixed top-0 left-0 right-0 z-50 bg-black/70 border-b border-yellow-400/20 hidden md:block"
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -68,7 +68,7 @@ export function Navigation() {
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => scrollToSection('#hero')}
             >
-              <Film className="w-6 h-6 text-cinematic-gold" />
+              <Film className="w-6 h-6 text-yellow-400" />
               <span className="font-serif text-xl font-bold text-white">
                 Paola Gisler
               </span>
@@ -84,8 +84,8 @@ export function Navigation() {
                   onClick={() => scrollToSection(item.href)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                     activeSection === item.href.replace('#', '')
-                      ? 'text-cinematic-gold bg-cinematic-gold/10'
-                      : 'text-gray-300 hover:text-cinematic-gold hover:bg-cinematic-gold/5'
+                      ? 'text-yellow-400 bg-yellow-400/10'
+                      : 'text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/5'
                   }`}
                 >
                   {item.icon}
@@ -100,7 +100,7 @@ export function Navigation() {
       {/* Mobile Navigation */}
       <motion.div
         style={{ opacity }}
-        className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-lg border-b border-cinematic-gold/20 md:hidden"
+        className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-lg border-b border-yellow-400/20 md:hidden"
       >
         <div className="flex items-center justify-between h-16 px-4">
           {/* Mobile logo */}
@@ -109,7 +109,7 @@ export function Navigation() {
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => scrollToSection('#hero')}
           >
-            <Film className="w-6 h-6 text-cinematic-gold" />
+            <Film className="w-6 h-6 text-yellow-400" />
             <span className="font-serif text-lg font-bold text-white">
               Paola Gisler
             </span>
@@ -120,7 +120,7 @@ export function Navigation() {
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="text-cinematic-gold hover:bg-cinematic-gold/10"
+            className="text-yellow-400 hover:bg-yellow-400/10"
           >
             <motion.div
               animate={{ rotate: isOpen ? 180 : 0 }}
@@ -154,8 +154,8 @@ export function Navigation() {
                 onClick={() => scrollToSection(item.href)}
                 className={`w-full flex items-center gap-3 px-6 py-3 text-left transition-all duration-300 ${
                   activeSection === item.href.replace('#', '')
-                    ? 'text-cinematic-gold bg-cinematic-gold/10 border-r-2 border-cinematic-gold'
-                    : 'text-gray-300 hover:text-cinematic-gold hover:bg-cinematic-gold/5'
+                    ? 'text-yellow-400 bg-yellow-400/10 border-r-2 border-yellow-400'
+                    : 'text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/5'
                 }`}
               >
                 {item.icon}
@@ -173,14 +173,14 @@ export function Navigation() {
       >
         <motion.div
           whileHover={{ scale: 1.1 }}
-          className="w-16 h-16 rounded-full bg-gradient-to-r from-cinematic-gold to-cinematic-bronze p-[2px]"
+          className="w-16 h-16 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 p-[2px]"
         >
           <div className="w-full h-full bg-black rounded-full flex items-center justify-center">
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             >
-              <Film className="w-6 h-6 text-cinematic-gold" />
+              <Film className="w-6 h-6 text-yellow-400" />
             </motion.div>
           </div>
         </motion.div>

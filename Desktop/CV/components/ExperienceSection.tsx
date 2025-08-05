@@ -1,73 +1,63 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Briefcase, Calendar, MapPin, TrendingUp, Code, Zap } from 'lucide-react'
+import { Briefcase, Calendar, MapPin, Film, Cog, Building } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
 
 const experiences = [
   {
-    title: "Self-Employed Developer & Automation Specialist",
-    company: "Freelance & Personal Projects",
-    period: "2023 - Present",
-    location: "Kuala Lumpur, Malaysia",
+    title: "Operations Coordinator | Process Optimization Specialist",
+    company: "BG Meios de Pagamento (BPO)",
+    period: "June 2024 - Present",
+    location: "Remote",
     type: "Full-time",
-    description: "Developing automation tools, Web3 applications, and data analysis solutions. Focus on creating practical tools that solve real-world problems through code.",
-    achievements: [
-      "Built comprehensive crypto portfolio tracking system with 90%+ accuracy",
-      "Developed DeFi dashboard handling $50K+ in tracked assets",
-      "Created automation scripts reducing manual work by 80%",
-      "Contributed to open-source projects with 40+ GitHub stars"
-    ],
-    technologies: ["Python", "JavaScript", "Web3", "Pandas", "APIs", "Automation"],
-    highlights: [
-      "Self-directed learning and project execution",
-      "Full-stack development from concept to deployment",
-      "Integration with blockchain protocols and financial APIs",
-      "Process optimization and workflow automation"
+    icon: Cog,
+    description: "Managing billing, financial reporting, and process optimization for a growing BPO company. Focus on streamlining workflows and improving operational efficiency.",
+    responsibilities: [
+      "Manage billing, financial reporting, and proof of payment documentation for multiple clients",
+      "Maintain and organize payment records, ensuring accuracy and compliance",
+      "Optimize workflow processes to improve efficiency and reduce manual tasks"
     ]
   },
   {
-    title: "Operations Specialist → Technical Implementation",
-    company: "Transition Period",
-    period: "2022 - 2023",
-    location: "Kuala Lumpur, Malaysia",
-    type: "Career Transition",
-    description: "Intensive self-study period focused on transitioning from operations to technical development. Completed comprehensive programming education while maintaining operational excellence.",
-    achievements: [
-      "Completed 300+ hours of Codecademy Python and data science courses",
-      "Built first automation tools reducing report generation time by 60%",
-      "Developed SQL skills managing databases with 10,000+ records",
-      "Created data visualization dashboards for operational metrics"
-    ],
-    technologies: ["Python", "SQL", "Excel VBA", "Process Design", "Data Analysis"],
-    highlights: [
-      "Successful career pivot from operations to development",
-      "Applied programming skills to improve existing processes",
-      "Built foundation in data analysis and visualization",
-      "Demonstrated ability to learn and implement quickly"
+    title: "2nd Assistant Director / Production Assistant",
+    company: "Freelance Film Production",
+    period: "February 2018 - June 2024",
+    location: "United States",
+    type: "Freelance",
+    icon: Film,
+    description: "Six years coordinating complex film productions under high-pressure environments. Managed logistics, scheduling, and cross-team communication.",
+    responsibilities: [
+      "Coordinated scheduling, logistics, and documentation, ensuring smooth production workflows",
+      "Managed budget tracking, vendor coordination, and invoice processing",
+      "Worked under high-pressure environments, solving problems efficiently"
     ]
   },
   {
-    title: "Operations & Process Design Specialist",
-    company: "Various Industries",
-    period: "2019 - 2022",
-    location: "Malaysia & International",
+    title: "Administrative Assistant",
+    company: "Maerkli Hotel",
+    period: "December 2013 - March 2016",
+    location: "Brazil",
     type: "Full-time",
-    description: "Led operational efficiency initiatives, process optimization, and workflow design across multiple sectors. Identified automation opportunities that later influenced transition to development.",
-    achievements: [
-      "Improved operational efficiency by 45% through process redesign",
-      "Managed cross-functional teams of 15+ members",
-      "Designed workflows handling 1000+ daily transactions",
-      "Reduced processing errors by 70% through systematic improvements"
-    ],
-    technologies: ["Process Mapping", "Data Analysis", "Excel", "Documentation", "Team Leadership"],
-    highlights: [
-      "Strong foundation in analytical problem-solving",
-      "Experience with large-scale process optimization",
-      "Understanding of business operations and pain points",
-      "Leadership and project management skills"
+    icon: Building,
+    description: "Developed foundational skills in billing, scheduling, and document management systems using spreadsheets and process design.",
+    responsibilities: [
+      "Managed billing and scheduling tasks efficiently",
+      "Developed systems for document management using spreadsheets"
+    ]
+  },
+  {
+    title: "Administrative and Marketing Assistant",
+    company: "Mirá Consultoria Imobiliária",
+    period: "December 2013 - March 2016",
+    location: "Brazil",
+    type: "Part-time",
+    icon: Building,
+    description: "Early experience in digital content creation and website management, developing skills in creative problem-solving.",
+    responsibilities: [
+      "Managed social media accounts and content creation",
+      "Assisted in website setup and content management"
     ]
   }
 ]
@@ -84,88 +74,50 @@ const ExperienceCard = ({ experience, index }: { experience: typeof experiences[
         <CardHeader className="pb-4">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              <CardTitle className="text-xl group-hover:text-primary transition-colors mb-2">
-                {experience.title}
-              </CardTitle>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-2">
-                <div className="flex items-center space-x-1">
-                  <Briefcase className="w-4 h-4" />
-                  <span className="font-medium text-foreground">{experience.company}</span>
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <experience.icon className="w-5 h-5 text-primary" />
                 </div>
-                <div className="flex items-center space-x-1">
-                  <Calendar className="w-4 h-4" />
-                  <span>{experience.period}</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <MapPin className="w-4 h-4" />
-                  <span>{experience.location}</span>
+                <div>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    {experience.title}
+                  </CardTitle>
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mt-1">
+                    <div className="flex items-center space-x-1">
+                      <Briefcase className="w-4 h-4" />
+                      <span className="font-medium text-foreground">{experience.company}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>{experience.period}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <MapPin className="w-4 h-4" />
+                      <span>{experience.location}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <Badge 
-                variant="outline" 
-                className={`
-                  w-fit
-                  ${experience.type === 'Full-time' ? 'border-green-500 text-green-500' : ''}
-                  ${experience.type === 'Career Transition' ? 'border-blue-500 text-blue-500' : ''}
-                `}
-              >
+              <Badge variant="outline" className="mb-3">
                 {experience.type}
               </Badge>
             </div>
           </div>
         </CardHeader>
-        
-        <CardContent className="space-y-6">
-          <CardDescription className="text-base leading-relaxed">
+
+        <CardContent className="space-y-4">
+          <CardDescription className="text-sm leading-relaxed">
             {experience.description}
           </CardDescription>
-          
-          {/* Key Achievements */}
+
+          {/* Key Responsibilities */}
           <div>
-            <h4 className="font-semibold mb-3 text-primary flex items-center">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Key Achievements
-            </h4>
-            <ul className="space-y-2">
-              {experience.achievements.map((achievement, i) => (
-                <li key={i} className="flex items-start space-x-2 text-sm">
-                  <span className="text-primary mt-1">•</span>
-                  <span className="text-muted-foreground">{achievement}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <Separator />
-          
-          {/* Technologies */}
-          <div>
-            <h4 className="font-semibold mb-3 text-primary flex items-center">
-              <Code className="w-4 h-4 mr-2" />
-              Technologies & Skills
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {experience.technologies.map((tech, i) => (
-                <Badge key={i} variant="secondary" className="font-mono text-xs">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </div>
-          
-          <Separator />
-          
-          {/* Highlights */}
-          <div>
-            <h4 className="font-semibold mb-3 text-primary flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              Professional Highlights
-            </h4>
-            <ul className="space-y-2">
-              {experience.highlights.map((highlight, i) => (
-                <li key={i} className="flex items-start space-x-2 text-sm">
-                  <span className="text-yellow-500 mt-1">★</span>
-                  <span className="text-muted-foreground">{highlight}</span>
+            <h4 className="text-sm font-semibold mb-3 text-foreground">Key Responsibilities</h4>
+            <ul className="text-sm text-muted-foreground space-y-2">
+              {experience.responsibilities.map((responsibility, idx) => (
+                <li key={idx} className="flex items-start space-x-2">
+                  <span className="text-primary mt-1 flex-shrink-0">•</span>
+                  <span className="leading-relaxed">{responsibility}</span>
                 </li>
               ))}
             </ul>
@@ -176,32 +128,9 @@ const ExperienceCard = ({ experience, index }: { experience: typeof experiences[
   )
 }
 
-const developmentStats = [
-  {
-    label: "Lines of Code Written",
-    value: "50,000+",
-    description: "Across Python, JavaScript, and Solidity projects"
-  },
-  {
-    label: "Projects Completed",
-    value: "25+",
-    description: "Personal, freelance, and open-source projects"
-  },
-  {
-    label: "GitHub Contributions",
-    value: "500+",
-    description: "Commits across repositories in the past year"
-  },
-  {
-    label: "Process Improvements",
-    value: "15+",
-    description: "Automation solutions deployed in production"
-  }
-]
-
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 px-4 bg-gradient-to-b from-background to-muted/10">
+    <section id="experience" className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -214,90 +143,18 @@ export default function ExperienceSection() {
             ./career-history
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Professional journey from operations specialist to developer, demonstrating 
-            adaptability, continuous learning, and practical problem-solving through technology.
+            From film sets to operations to AI-powered building. A journey of continuous learning, 
+            problem-solving, and adapting skills across industries.
           </p>
-        </motion.div>
-
-        {/* Development Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          {developmentStats.map((stat, index) => (
-            <Card key={index} className="text-center glow-border group hover:border-primary/40 transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="text-3xl font-bold text-primary mb-2 group-hover:animate-pulse">
-                  {stat.value}
-                </div>
-                <div className="font-semibold mb-1">{stat.label}</div>
-                <div className="text-xs text-muted-foreground">{stat.description}</div>
-              </CardContent>
-            </Card>
-          ))}
         </motion.div>
 
         {/* Experience Timeline */}
         <div className="space-y-8">
           {experiences.map((experience, index) => (
-            <div key={index} className="relative">
-              {/* Timeline connector */}
-              {index < experiences.length - 1 && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-0.5 h-8 bg-border z-10" />
-              )}
-              
-              {/* Timeline dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-4 w-4 h-4 bg-primary rounded-full border-4 border-background z-20" />
-              
-              <ExperienceCard experience={experience} index={index} />
-            </div>
+            <ExperienceCard key={index} experience={experience} index={index} />
           ))}
         </div>
 
-        {/* Career Progression Summary */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-          <Card className="max-w-4xl mx-auto glow-border">
-            <CardHeader>
-              <CardTitle className="text-2xl gradient-text text-center">
-                Career Evolution: Operations → Development
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <h4 className="text-lg font-semibold mb-3 text-primary">Foundation</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Built analytical skills and process optimization expertise in operations roles, 
-                    identifying automation opportunities and efficiency improvements.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-3 text-primary">Transition</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Self-taught programming through intensive study and practical application, 
-                    bridging operational knowledge with technical implementation.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-3 text-primary">Specialization</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Focused on automation, Web3 development, and data analysis, 
-                    creating tools that solve real problems with measurable impact.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
       </div>
     </section>
   )

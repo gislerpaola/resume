@@ -14,9 +14,9 @@ import { ChevronUp, Menu, X } from 'lucide-react'
 const navigation = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ]
 
@@ -95,7 +95,7 @@ export default function HomePage() {
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold font-mono">P</span>
               </div>
-              <span className="font-mono font-bold gradient-text">paola.dev</span>
+              <span className="font-sans font-bold gradient-text">Paola Gisler</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -105,7 +105,7 @@ export default function HomePage() {
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
                   className={`
-                    text-sm font-mono transition-colors hover:text-primary
+                    text-sm font-sans transition-colors hover:text-primary
                     ${activeSection === item.href.substring(1) 
                       ? 'text-primary' 
                       : 'text-muted-foreground'
@@ -150,7 +150,7 @@ export default function HomePage() {
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
                 className={`
-                  block w-full text-left py-2 px-3 rounded-lg text-sm font-mono transition-colors
+                  block w-full text-left py-2 px-3 rounded-lg text-sm font-sans transition-colors
                   hover:bg-primary/10 hover:text-primary
                   ${activeSection === item.href.substring(1) 
                     ? 'text-primary bg-primary/10' 
@@ -173,27 +173,27 @@ export default function HomePage() {
         </div>
 
         {/* About Section */}
-        <div id="about">
+        <div id="about" className="pt-20">
           <AboutSection />
         </div>
 
+        {/* Experience Section */}
+        <div id="experience" className="pt-20">
+          <ExperienceSection />
+        </div>
+
         {/* Projects Section */}
-        <div id="projects">
+        <div id="projects" className="pt-20">
           <ProjectsSection />
         </div>
 
         {/* Skills Section */}
-        <div id="skills">
+        <div id="skills" className="pt-20">
           <SkillsSection />
         </div>
 
-        {/* Experience Section */}
-        <div id="experience">
-          <ExperienceSection />
-        </div>
-
         {/* Contact Section */}
-        <div id="contact">
+        <div id="contact" className="pt-20">
           <ContactSection />
         </div>
       </main>
@@ -206,7 +206,7 @@ export default function HomePage() {
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold font-mono">P</span>
               </div>
-              <span className="font-mono font-bold gradient-text text-xl">paola.dev</span>
+              <span className="font-sans font-bold gradient-text text-xl">Paola Gisler</span>
             </div>
             <p className="text-muted-foreground mb-4 font-mono text-sm">
               Built with Next.js, React, Tailwind CSS, and Framer Motion
@@ -240,7 +240,7 @@ export default function HomePage() {
             <div className="mt-8 pt-8 border-t border-border text-xs text-muted-foreground font-mono">
               <p>© 2024 Paola Gisler. All rights reserved.</p>
               <p className="mt-1">
-                <span className="text-primary">$</span> echo "Always learning, always building" 
+                <span className="text-primary">$</span> echo &quot;Always learning, always building&quot; 
                 <span className="animate-blink text-primary">|</span>
               </p>
             </div>
@@ -269,10 +269,10 @@ export default function HomePage() {
 
       {/* Background Effects */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        {/* Subtle Gradient Orbs */}
+        {/* Subtle Purple Gradient Orbs */}
         <div className="absolute top-1/3 left-1/5 w-96 h-96 bg-primary/3 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/3 right-1/5 w-96 h-96 bg-cyan-500/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-2/3 left-2/3 w-64 h-64 bg-blue-500/2 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '6s' }} />
+        <div className="absolute bottom-1/3 right-1/5 w-96 h-96 bg-purple-500/3 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-2/3 left-2/3 w-64 h-64 bg-indigo-500/2 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '6s' }} />
         
         {/* Subtle Grid Pattern */}
         <div 

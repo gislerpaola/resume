@@ -93,7 +93,7 @@ export function ProjectsSection() {
               PORTFOLIO
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cinematic-gold to-cinematic-bronze mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A showcase of leadership, innovation, and problem-solving across 
             film production, fintech operations, and technical development.
@@ -111,12 +111,12 @@ export function ProjectsSection() {
           {categories.map((category) => (
             <Button
               key={category}
-              variant={selectedCategory === category ? "cinematic" : "outline"}
+              variant={selectedCategory === category ? "default" : "outline"}
               onClick={() => setSelectedCategory(category)}
               className={`transition-all duration-300 ${
                 selectedCategory === category 
-                  ? 'shadow-lg shadow-cinematic-gold/25' 
-                  : 'hover:border-cinematic-gold/50'
+                  ? 'shadow-lg shadow-yellow-400/25' 
+                  : 'hover:border-yellow-400/50'
               }`}
             >
               {category}
@@ -162,7 +162,7 @@ export function ProjectsSection() {
                   >
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="bg-cinematic-gold/90 p-4 rounded-full"
+                      className="bg-yellow-400/90 p-4 rounded-full"
                     >
                       <Play className="w-8 h-8 text-black" />
                     </motion.div>
@@ -172,10 +172,10 @@ export function ProjectsSection() {
                 {/* Project info */}
                 <div className="space-y-4">
                   <div>
-                    <span className="text-sm text-cinematic-gold font-semibold">
+                    <span className="text-sm text-yellow-400 font-semibold">
                       {project.category}
                     </span>
-                    <h3 className="font-serif text-2xl font-bold text-white mt-1 group-hover:text-cinematic-gold transition-colors duration-300">
+                    <h3 className="font-serif text-2xl font-bold text-white mt-1 group-hover:text-yellow-400 transition-colors duration-300">
                       {project.title}
                     </h3>
                   </div>
@@ -189,7 +189,7 @@ export function ProjectsSection() {
                     {project.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-cinematic-gold/10 text-cinematic-gold text-sm rounded-full border border-cinematic-gold/20"
+                        className="px-3 py-1 bg-yellow-400/10 text-yellow-400 text-sm rounded-full border border-yellow-400/20"
                       >
                         {tech}
                       </span>
@@ -202,7 +202,7 @@ export function ProjectsSection() {
                     <ul className="space-y-1">
                       {project.achievements.map((achievement, achievementIndex) => (
                         <li key={achievementIndex} className="flex items-start gap-2 text-sm text-gray-300">
-                          <div className="w-1.5 h-1.5 bg-cinematic-gold rounded-full mt-2 flex-shrink-0"></div>
+                          <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
                           <span>{achievement}</span>
                         </li>
                       ))}
@@ -211,7 +211,7 @@ export function ProjectsSection() {
 
                   {/* Action buttons */}
                   <div className="flex gap-3 pt-4">
-                    <Button variant="cinematic" size="sm" className="flex-1">
+                    <Button variant="default" size="sm" className="flex-1">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Learn More
                     </Button>
@@ -238,7 +238,7 @@ export function ProjectsSection() {
           <h3 className="font-serif text-3xl font-bold text-white mb-6">
             Ready to Create Something Amazing?
           </h3>
-          <Button variant="cinematic" size="lg" className="px-8 py-4">
+          <Button variant="default" size="lg" className="px-8 py-4">
             Let's Collaborate
           </Button>
         </motion.div>
