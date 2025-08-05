@@ -83,7 +83,7 @@ export default function ContactSection() {
     try {
       // Replace 'YOUR_FORM_ID' with your actual Formspree form ID
       // Sign up at formspree.io and create a form to get your ID
-      const response = await fetch('https://formspree.io/f/xdkoorqr', {
+      const response = await fetch('https://formspree.io/f/xyzpnjql', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
