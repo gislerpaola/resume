@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Star, GitFork, Code2, Database, Bot, Coins } from 'lucide-react'
+import { Github, ExternalLink, Star, GitFork, Code2, Database, Bot, Coins, Terminal, Clipboard } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -9,87 +9,87 @@ import { Badge } from '@/components/ui/badge'
 const projects = [
   {
     id: 1,
-    name: "Crypto Portfolio Tracker",
-    description: "Python-based cryptocurrency portfolio management system with real-time price tracking, P&L calculations, and automated reporting. Features integration with CoinGecko API and comprehensive data visualization.",
+    name: "Crypto Price Tracker",
+    description: "Python-based cryptocurrency price tracking application with real-time price monitoring and personalized coin lists. Features data from CoinMarketCap and CoinRanking with AI-assisted interface design.",
     icon: Coins,
-    technologies: ["Python", "Pandas", "Requests", "CoinGecko API", "Data Visualization"],
+    technologies: ["Python", "Requests", "BeautifulSoup4", "JSON", "AI-Assisted Design"],
     features: [
-      "Real-time price tracking for multiple cryptocurrencies",
-      "Portfolio performance analytics and P&L calculations",
-      "Automated daily/weekly reporting via email",
-      "Historical data analysis and trend visualization",
-      "Risk assessment and diversification metrics"
+      "Real-time cryptocurrency price tracking",
+      "Top 10, 50, and 100 crypto rankings",
+      "Personalized coin list with persistent storage",
+      "Data from multiple sources (CoinMarketCap, CoinRanking)",
+      "AI-generated interface with custom prompts"
     ],
-    github: "https://github.com/gislerpaola/crypto-tracker",
+    github: "https://github.com/gislerpaola/crypto_tracker",
     demo: null,
     status: "Active",
-    stars: 15,
-    forks: 3,
+    stars: 0,
+    forks: 0,
     language: "Python",
-    lastUpdated: "2024-01-15"
+    lastUpdated: "2025"
   },
   {
     id: 2,
-    name: "Aave DeFi Dashboard",
-    description: "Comprehensive DeFi dashboard for interacting with Aave protocol. Monitor lending positions, track yields, and execute transactions directly from a clean, professional interface.",
+    name: "Aave Wallet Tracker",
+    description: "Desktop DeFi dashboard for secure Aave wallet health monitoring. Features encrypted wallet storage and automated data tracking without direct wallet connection for enhanced security.",
     icon: Database,
-    technologies: ["JavaScript", "Ethers.js", "Web3", "React", "Aave Protocol"],
+    technologies: ["Python", "Tkinter", "Selenium", "Cryptography", "Fernet Encryption"],
     features: [
-      "Real-time lending and borrowing position tracking",
-      "Health factor monitoring with alerts",
-      "Direct protocol interaction for deposits/withdrawals",
-      "Yield farming optimization suggestions",
-      "Gas fee estimation and optimization"
+      "Secure wallet address encryption with Fernet",
+      "Health Factor and borrowing capacity monitoring",
+      "Automated dashboard data scraping",
+      "Polygon network Aave wallet support",
+      "Local encrypted storage with password-derived keys"
     ],
-    github: "https://github.com/gislerpaola/aave-dashboard",
-    demo: "https://aave-dashboard-demo.vercel.app",
-    status: "Development",
-    stars: 8,
-    forks: 2,
-    language: "JavaScript",
-    lastUpdated: "2024-01-20"
+    github: "https://github.com/gislerpaola/aave_dashboard",
+    demo: null,
+    status: "Active",
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    lastUpdated: "2025"
   },
   {
     id: 3,
-    name: "Process Automation Suite",
-    description: "Collection of Python automation tools designed to streamline operational workflows. Includes file processing, data validation, report generation, and notification systems.",
-    icon: Bot,
-    technologies: ["Python", "Pandas", "Schedule", "SMTP", "OS Operations"],
+    name: "Clipboard Manager",
+    description: "macOS menu bar utility that extends system clipboard functionality with persistent history and unlimited storage. Perfect for professionals who frequently reuse text snippets and templates.",
+    icon: Clipboard,
+    technologies: ["Python", "Rumps", "Pyperclip", "PyInstaller", "macOS APIs"],
     features: [
-      "Automated file processing and organization",
-      "Data validation and cleaning pipelines",
-      "Scheduled report generation and distribution",
-      "Error handling and logging systems",
-      "Email notifications for critical events"
+      "Persistent clipboard history across restarts",
+      "Menu bar access with one-click copying",
+      "Unlimited item storage capacity",
+      "Selective item deletion and history clearing",
+      "Standalone .app distribution"
     ],
-    github: "https://github.com/gislerpaola/automation-tools",
+    github: "https://github.com/gislerpaola/clipboard_manager",
     demo: null,
     status: "Active",
-    stars: 12,
-    forks: 5,
+    stars: 0,
+    forks: 0,
     language: "Python",
-    lastUpdated: "2024-01-10"
+    lastUpdated: "2025"
   },
   {
     id: 4,
-    name: "File Management Utilities",
-    description: "Advanced file management system with intelligent organization, duplicate detection, and batch operations. Designed for handling large datasets and maintaining clean directory structures.",
-    icon: Code2,
-    technologies: ["Python", "OS", "Pathlib", "Hashlib", "Threading"],
+    name: "AI Agent Reporting System",
+    description: "Enterprise-grade reporting system leveraging AI agents for automated data analysis and insights generation. Built for company use with advanced analytics and customizable reporting workflows.",
+    icon: Bot,
+    technologies: ["Python", "AI/ML Libraries", "Data Analytics", "Automation", "Enterprise APIs"],
     features: [
-      "Intelligent file organization by type, date, and content",
-      "Duplicate file detection and removal",
-      "Bulk renaming and restructuring operations",
-      "File integrity verification and backup systems",
-      "Multi-threaded processing for large datasets"
+      "AI-powered automated report generation",
+      "Custom analytics and insights engine",
+      "Enterprise-grade data processing",
+      "Configurable reporting workflows",
+      "Advanced data visualization and exports"
     ],
-    github: "https://github.com/gislerpaola/file-utilities",
+    github: null,
     demo: null,
-    status: "Maintained",
-    stars: 7,
-    forks: 1,
+    status: "Private/Enterprise",
+    stars: null,
+    forks: null,
     language: "Python",
-    lastUpdated: "2023-12-28"
+    lastUpdated: "2025"
   }
 ]
 
@@ -112,91 +112,107 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0], index: n
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">
                   {project.name}
                 </CardTitle>
-                <div className="flex items-center space-x-4 mt-1 text-sm text-muted-foreground">
-                  <span className="flex items-center space-x-1">
-                    <Star className="w-3 h-3" />
-                    <span>{project.stars}</span>
-                  </span>
-                  <span className="flex items-center space-x-1">
-                    <GitFork className="w-3 h-3" />
-                    <span>{project.forks}</span>
-                  </span>
+                <div className="flex items-center space-x-2 mt-1">
+                  <Badge variant="secondary" className="text-xs">
+                    {project.language}
+                  </Badge>
                   <Badge 
-                    variant="outline" 
-                    className={`
-                      ${project.status === 'Active' ? 'border-green-500 text-green-500' : ''}
-                      ${project.status === 'Development' ? 'border-yellow-500 text-yellow-500' : ''}
-                      ${project.status === 'Maintained' ? 'border-blue-500 text-blue-500' : ''}
-                    `}
+                    variant={project.status === 'Active' ? 'default' : project.status === 'Private/Enterprise' ? 'outline' : 'secondary'} 
+                    className="text-xs"
                   >
                     {project.status}
                   </Badge>
                 </div>
               </div>
             </div>
+            
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              {project.stars !== null && (
+                <div className="flex items-center space-x-1">
+                  <Star className="w-4 h-4" />
+                  <span>{project.stars}</span>
+                </div>
+              )}
+              {project.forks !== null && (
+                <div className="flex items-center space-x-1">
+                  <GitFork className="w-4 h-4" />
+                  <span>{project.forks}</span>
+                </div>
+              )}
+            </div>
           </div>
         </CardHeader>
-        
-        <CardContent className="space-y-6">
-          <CardDescription className="text-base leading-relaxed">
+
+        <CardContent className="space-y-4">
+          <CardDescription className="text-sm leading-relaxed">
             {project.description}
           </CardDescription>
-          
+
           {/* Technologies */}
           <div>
-            <h4 className="font-semibold mb-2 text-primary">Tech Stack</h4>
-            <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech, i) => (
-                <Badge key={i} variant="secondary" className="font-mono text-xs">
+            <h4 className="text-sm font-semibold mb-2 text-foreground">Technologies</h4>
+            <div className="flex flex-wrap gap-1">
+              {project.technologies.map((tech, index) => (
+                <Badge key={index} variant="outline" className="text-xs">
                   {tech}
                 </Badge>
               ))}
             </div>
           </div>
-          
+
           {/* Key Features */}
           <div>
-            <h4 className="font-semibold mb-2 text-primary">Key Features</h4>
-            <ul className="space-y-1 text-sm text-muted-foreground">
-              {project.features.slice(0, 3).map((feature, i) => (
-                <li key={i} className="flex items-start space-x-2">
+            <h4 className="text-sm font-semibold mb-2 text-foreground">Key Features</h4>
+            <ul className="text-xs text-muted-foreground space-y-1">
+              {project.features.map((feature, index) => (
+                <li key={index} className="flex items-start space-x-2">
                   <span className="text-primary mt-1">•</span>
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
-          
-          {/* Project Links */}
-          <div className="flex space-x-3 pt-4 border-t border-border">
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="flex-1 group/btn hover:border-primary hover:text-primary transition-all"
-              onClick={() => window.open(project.github, '_blank')}
-            >
-              <Github className="w-4 h-4 mr-2 group-hover/btn:animate-pulse" />
-              Code
-            </Button>
+
+          {/* Action Buttons */}
+          <div className="flex items-center space-x-2 pt-4">
+            {project.github ? (
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1 group/btn hover:border-primary hover:text-primary transition-all duration-300"
+                onClick={() => window.open(project.github, '_blank')}
+              >
+                <Github className="w-4 h-4 mr-2 group-hover/btn:animate-pulse" />
+                View Code
+              </Button>
+            ) : (
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex-1"
+                disabled
+              >
+                <Terminal className="w-4 h-4 mr-2" />
+                Private Repo
+              </Button>
+            )}
+            
             {project.demo && (
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="flex-1 group/btn hover:border-primary hover:text-primary transition-all"
-                onClick={() => window.open(project.demo, '_blank')}
+              <Button
+                variant="secondary"
+                size="sm"
+                className="flex-1 group/btn hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                onClick={() => project.demo && window.open(project.demo, '_blank')}
               >
                 <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:animate-pulse" />
-                Demo
+                Live Demo
               </Button>
             )}
           </div>
-          
-          {/* Project Metadata */}
-          <div className="text-xs text-muted-foreground font-mono pt-2 border-t border-border">
-            <div className="flex justify-between">
-              <span>Language: {project.language}</span>
-              <span>Updated: {project.lastUpdated}</span>
-            </div>
+
+          {/* Footer */}
+          <div className="flex items-center justify-between pt-2 border-t border-border/50 text-xs text-muted-foreground">
+            <span>Last updated: {project.lastUpdated}</span>
           </div>
         </CardContent>
       </Card>
@@ -219,60 +235,43 @@ export default function ProjectsSection() {
             ./projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            A collection of open-source projects demonstrating expertise in Python automation, 
-            Web3 development, and process optimization. Each project solves real-world problems 
-            with clean, maintainable code.
+            Real-world solutions built with AI assistance and creative problem-solving. 
+            Each project addresses specific challenges with practical, user-focused implementations.
           </p>
         </motion.div>
 
-        {/* Featured Project */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-primary mb-2">Featured Project</h3>
-            <p className="text-muted-foreground">Highlighted work showcasing technical depth and practical application</p>
-          </div>
-          <ProjectCard project={projects[0]} index={0} />
-        </motion.div>
-
-        {/* All Projects Grid */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
-          {projects.slice(1).map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index + 1} />
+        {/* Projects Grid */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        {/* GitHub CTA */}
+        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <Card className="max-w-2xl mx-auto glow-border">
-            <CardContent className="p-8">
-              <Github className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Explore More on GitHub</h3>
-              <p className="text-muted-foreground mb-6">
-                Discover additional projects, contribute to open source, and follow my development journey. 
-                All code is thoroughly documented and continuously maintained.
-              </p>
-              <Button 
-                size="lg" 
-                className="font-mono group hover:animate-glow"
-                onClick={() => window.open('https://github.com/gislerpaola', '_blank')}
-              >
-                <Github className="w-5 h-5 mr-2 group-hover:animate-pulse" />
-                Visit GitHub Profile
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4 gradient-text">
+              Interested in collaborating?
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              These projects represent my approach to building practical solutions. 
+              Let&apos;s discuss how similar thinking can solve your challenges.
+            </p>
+            <Button
+              size="lg"
+              className="group hover:glow-border transition-all duration-300"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              <Terminal className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+              Start a Conversation
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>

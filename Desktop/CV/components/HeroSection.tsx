@@ -2,22 +2,22 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Terminal, Github, MapPin, Mail, Phone } from 'lucide-react'
+import { Terminal, Github, Linkedin, MapPin, Mail, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const terminalLines = [
-  { prompt: 'guest@portfolio:~$', command: 'whoami', delay: 0 },
-  { prompt: '', command: 'paola.gisler', delay: 800, color: 'text-terminal-green' },
-  { prompt: 'guest@portfolio:~$', command: 'cat about.txt', delay: 1600 },
-  { prompt: '', command: 'Developer & Automation Specialist', delay: 2400, color: 'text-terminal-blue' },
+  { prompt: 'visitor@paola:~$', command: 'who_am_i', delay: 0 },
+  { prompt: '', command: 'Paola Gisler', delay: 800, color: 'text-white' },
+  { prompt: 'visitor@paola:~$', command: 'cat story.txt', delay: 1600 },
+  { prompt: '', command: 'AI-Powered Builder & Creative Technologist', delay: 2400, color: 'text-white' },
   { prompt: '', command: 'Location: Kuala Lumpur, Malaysia', delay: 2800, color: 'text-terminal-text' },
-  { prompt: '', command: 'Specializing in Python, Web3 & Process Automation', delay: 3200, color: 'text-terminal-text' },
-  { prompt: 'guest@portfolio:~$', command: 'ls -la skills/', delay: 4000 },
-  { prompt: '', command: 'drwxr-xr-x  python/', delay: 4400, color: 'text-terminal-yellow' },
-  { prompt: '', command: 'drwxr-xr-x  web3-blockchain/', delay: 4600, color: 'text-terminal-yellow' },
-  { prompt: '', command: 'drwxr-xr-x  automation/', delay: 4800, color: 'text-terminal-yellow' },
-  { prompt: '', command: 'drwxr-xr-x  data-analysis/', delay: 5000, color: 'text-terminal-yellow' },
-  { prompt: 'guest@portfolio:~$', command: '', delay: 5500, cursor: true },
+  { prompt: '', command: 'From Film Sets → Operations → Building with AI', delay: 3200, color: 'text-terminal-text' },
+  { prompt: 'visitor@paola:~$', command: 'ls skills/', delay: 4000 },
+  { prompt: '', command: '→ Problem Solving', delay: 4400, color: 'text-terminal-yellow' },
+  { prompt: '', command: '→ Process Automation', delay: 4600, color: 'text-terminal-yellow' },
+  { prompt: '', command: '→ AI-Assisted Building', delay: 4800, color: 'text-terminal-yellow' },
+  { prompt: '', command: '→ Creative Solutions', delay: 5000, color: 'text-terminal-yellow' },
+  { prompt: 'visitor@paola:~$', command: '', delay: 5500, cursor: true },
 ]
 
 interface TerminalLineProps {
@@ -53,7 +53,7 @@ const TerminalLine = ({ line, isVisible }: TerminalLineProps) => {
   if (!isVisible) return null
 
   return (
-    <div className="flex items-center font-mono text-sm">
+    <div className="flex items-center font-mono text-base">
       <span className={line.color || 'text-terminal-text'}>
         {line.prompt && (
           <span className="text-terminal-green">{line.prompt}</span>
@@ -99,7 +99,7 @@ export default function HeroSection() {
             </div>
             <div className="flex-1 text-center">
               <span className="text-terminal-text text-sm font-mono">
-                paola@portfolio: ~/developer
+                paola@workspace: ~/story
               </span>
             </div>
             <div className="flex items-center">
@@ -108,8 +108,8 @@ export default function HeroSection() {
           </div>
 
           {/* Terminal Content */}
-          <div className="terminal-content min-h-[400px]">
-            <div className="space-y-2">
+          <div className="terminal-content min-h-[500px] text-base">
+            <div className="space-y-3">
               {terminalLines.map((line, index) => (
                 <TerminalLine
                   key={index}
@@ -142,6 +142,16 @@ export default function HeroSection() {
             variant="outline" 
             size="lg"
             className="group border-terminal-border hover:border-primary hover:glow-border transition-all duration-300"
+            onClick={() => window.open('https://www.linkedin.com/in/paolagisler', '_blank')}
+          >
+            <Linkedin className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+            LinkedIn
+          </Button>
+          
+          <Button 
+            variant="outline" 
+            size="lg"
+            className="group border-terminal-border hover:border-primary hover:glow-border transition-all duration-300"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             <Mail className="w-4 h-4 mr-2 group-hover:animate-pulse" />
@@ -154,7 +164,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 7 }}
-          className="flex flex-wrap justify-center gap-6 mt-12 text-sm text-muted-foreground"
+          className="flex flex-wrap justify-center gap-6 mt-6 text-sm text-muted-foreground"
         >
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4 text-primary" />

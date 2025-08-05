@@ -5,7 +5,29 @@ import { useRef, useState } from "react"
 import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
 import { Clapperboard, Code, Globe, Palette, Users, Zap } from "lucide-react"
-import { skills } from "@/lib/utils"
+// Skills data moved to component since it's only used here
+const skills = {
+  creative: [
+    { name: "Production Management", level: 95 },
+    { name: "Team Leadership", level: 90 },
+    { name: "Cross-functional Coordination", level: 92 },
+    { name: "Budget Management", level: 85 },
+    { name: "Quality Assurance", level: 88 }
+  ],
+  technical: [
+    { name: "Python Development", level: 75 },
+    { name: "Web3 & Blockchain", level: 65 },
+    { name: "Process Automation", level: 80 },
+    { name: "Data Analysis", level: 70 },
+    { name: "System Integration", level: 75 }
+  ],
+  languages: [
+    { name: "English", level: 100 },
+    { name: "Portuguese", level: 100 },
+    { name: "Spanish", level: 85 },
+    { name: "Bahasa Malaysia", level: 60 }
+  ]
+}
 
 const skillCategories = {
   creative: {
@@ -50,7 +72,7 @@ export function SkillsSection() {
               SKILL SET
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cinematic-gold to-cinematic-bronze mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             A versatile toolkit developed through years of high-pressure environments, 
             international collaboration, and continuous learning.
@@ -68,13 +90,13 @@ export function SkillsSection() {
           {Object.entries(skillCategories).map(([key, category]) => (
             <Button
               key={key}
-              variant={activeCategory === key ? "cinematic" : "outline"}
+              variant={activeCategory === key ? "default" : "outline"}
               size="lg"
               onClick={() => setActiveCategory(key as keyof typeof skills)}
               className={`flex items-center gap-3 px-6 py-4 transition-all duration-300 ${
                 activeCategory === key 
-                  ? 'shadow-lg shadow-cinematic-gold/25' 
-                  : 'hover:border-cinematic-gold/50'
+                  ? 'shadow-lg shadow-yellow-400/25' 
+                  : 'hover:border-yellow-400/50'
               }`}
             >
               {category.icon}
@@ -101,7 +123,7 @@ export function SkillsSection() {
             <div className="bg-black/90 rounded-xl p-8 backdrop-blur-sm">
               <div className="text-center mb-8">
                 <div className="flex justify-center items-center gap-4 mb-4">
-                  <div className="text-cinematic-gold">
+                  <div className="text-yellow-400">
                     {skillCategories[activeCategory].icon}
                   </div>
                   <h3 className="font-serif text-3xl font-bold text-white">
@@ -123,23 +145,23 @@ export function SkillsSection() {
                     className="group"
                   >
                     <div className="flex justify-between items-center mb-3">
-                      <span className="font-semibold text-white text-lg group-hover:text-cinematic-gold transition-colors duration-300">
+                      <span className="font-semibold text-white text-lg group-hover:text-yellow-400 transition-colors duration-300">
                         {skill.name}
                       </span>
-                      <span className="text-cinematic-gold font-bold">
+                      <span className="text-yellow-400 font-bold">
                         {skill.level}%
                       </span>
                     </div>
                     <div className="relative">
                       <Progress 
                         value={skill.level} 
-                        className="h-3 bg-gray-800 group-hover:shadow-lg group-hover:shadow-cinematic-gold/20 transition-all duration-300"
+                        className="h-3 bg-gray-800 group-hover:shadow-lg group-hover:shadow-yellow-400/20 transition-all duration-300"
                       />
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${skill.level}%` }}
                         transition={{ delay: index * 0.1 + 0.5, duration: 1, ease: "easeOut" }}
-                        className="absolute top-0 left-0 h-3 bg-gradient-to-r from-cinematic-gold via-cinematic-bronze to-cinematic-gold rounded-full"
+                        className="absolute top-0 left-0 h-3 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 rounded-full"
                       />
                     </div>
                   </motion.div>
@@ -159,17 +181,17 @@ export function SkillsSection() {
         >
           {[
             {
-              icon: <Users className="w-12 h-12 text-cinematic-gold" />,
+              icon: <Users className="w-12 h-12 text-yellow-400" />,
               title: "Team Leadership",
               description: "Coordinated crews of 100+ on major film productions"
             },
             {
-              icon: <Zap className="w-12 h-12 text-cinematic-gold" />,
+              icon: <Zap className="w-12 h-12 text-yellow-400" />,
               title: "Under Pressure",
               description: "Thrives in high-stakes, deadline-driven environments"
             },
             {
-              icon: <Palette className="w-12 h-12 text-cinematic-gold" />,
+              icon: <Palette className="w-12 h-12 text-yellow-400" />,
               title: "Creative Problem Solving",
               description: "Innovative solutions for complex operational challenges"
             }
@@ -181,7 +203,7 @@ export function SkillsSection() {
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-gradient-to-br from-film-noir to-black p-8 rounded-xl border border-cinematic-gold/20 hover:border-cinematic-gold/60 transition-all duration-300 text-center group"
+              className="bg-gradient-to-br from-film-noir to-black p-8 rounded-xl border border-yellow-400/20 hover:border-yellow-400/60 transition-all duration-300 text-center group"
             >
               <motion.div
                 whileHover={{ rotate: 360 }}
@@ -190,7 +212,7 @@ export function SkillsSection() {
               >
                 {highlight.icon}
               </motion.div>
-              <h4 className="font-serif text-xl font-bold text-white mb-3 group-hover:text-cinematic-gold transition-colors duration-300">
+              <h4 className="font-serif text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors duration-300">
                 {highlight.title}
               </h4>
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">

@@ -3,7 +3,8 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Calendar, MapPin, Award, Star } from "lucide-react"
-import { experiences } from "@/lib/utils"
+// import { experiences } from "@/lib/utils"
+const experiences: any[] = [] // Placeholder for unused component
 
 const container = {
   hidden: { opacity: 0 },
@@ -49,7 +50,7 @@ export function ExperienceSection() {
               THE REEL STORY
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cinematic-gold to-cinematic-bronze mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             From coordinating A-list casts to optimizing fintech operations - 
             a journey of leadership, precision, and innovation.
@@ -71,7 +72,7 @@ export function ExperienceSection() {
             >
               {/* Timeline line */}
               {index < experiences.length - 1 && (
-                <div className="absolute left-4 md:left-8 top-24 w-0.5 h-32 bg-gradient-to-b from-cinematic-gold to-transparent z-0"></div>
+                <div className="absolute left-4 md:left-8 top-24 w-0.5 h-32 bg-gradient-to-b from-yellow-400 to-transparent z-0"></div>
               )}
               
               {/* Experience card */}
@@ -80,9 +81,9 @@ export function ExperienceSection() {
                 <div className="relative flex-shrink-0">
                   <motion.div
                     whileHover={{ scale: 1.2 }}
-                    className="w-8 h-8 bg-gradient-to-r from-cinematic-gold to-cinematic-bronze rounded-full border-4 border-black z-10 relative"
+                    className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full border-4 border-black z-10 relative"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-cinematic-gold to-cinematic-bronze rounded-full animate-pulse opacity-50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full animate-pulse opacity-50"></div>
                   </motion.div>
                 </div>
 
@@ -90,13 +91,13 @@ export function ExperienceSection() {
                 <motion.div
                   whileHover={{ scale: 1.02, y: -5 }}
                   transition={{ duration: 0.3 }}
-                  className={`flex-1 bg-gradient-to-br ${exp.color} p-[2px] rounded-lg film-border group-hover:shadow-2xl group-hover:shadow-cinematic-gold/20 transition-all duration-500`}
+                  className={`flex-1 bg-gradient-to-br ${exp.color} p-[2px] rounded-lg film-border group-hover:shadow-2xl group-hover:shadow-yellow-400/20 transition-all duration-500`}
                 >
                   <div className="bg-black/90 rounded-lg p-8 h-full backdrop-blur-sm">
                     <div className="flex flex-col md:flex-row justify-between items-start mb-6">
                       <div className="flex-1">
                         <motion.h3 
-                          className="font-serif text-2xl md:text-3xl font-bold text-cinematic-gold mb-2"
+                          className="font-serif text-2xl md:text-3xl font-bold text-yellow-400 mb-2"
                           whileHover={{ textShadow: "0 0 20px rgba(255, 215, 0, 0.5)" }}
                         >
                           {exp.company}
@@ -110,7 +111,7 @@ export function ExperienceSection() {
                           <Star 
                             key={i} 
                             size={16} 
-                            className="text-cinematic-gold fill-current" 
+                            className="text-yellow-400 fill-current" 
                           />
                         ))}
                       </div>
@@ -118,11 +119,11 @@ export function ExperienceSection() {
 
                     <div className="flex flex-wrap gap-4 mb-6 text-sm">
                       <div className="flex items-center gap-2 text-gray-300">
-                        <Calendar size={16} className="text-cinematic-gold" />
+                        <Calendar size={16} className="text-yellow-400" />
                         <span>{exp.period}</span>
                       </div>
                       <div className="flex items-center gap-2 text-gray-300">
-                        <MapPin size={16} className="text-cinematic-gold" />
+                        <MapPin size={16} className="text-yellow-400" />
                         <span>{exp.location}</span>
                       </div>
                     </div>
@@ -133,11 +134,11 @@ export function ExperienceSection() {
 
                     <div className="space-y-3">
                       <div className="flex items-center gap-2 mb-3">
-                        <Award size={16} className="text-cinematic-gold" />
+                        <Award size={16} className="text-yellow-400" />
                         <span className="font-semibold text-white">Key Achievements</span>
                       </div>
                       <ul className="space-y-2">
-                        {exp.achievements.map((achievement, achievementIndex) => (
+                        {exp.achievements.map((achievement: any, achievementIndex: number) => (
                           <motion.li
                             key={achievementIndex}
                             initial={{ opacity: 0, x: -20 }}
@@ -146,7 +147,7 @@ export function ExperienceSection() {
                             viewport={{ once: true }}
                             className="flex items-start gap-3 text-gray-300"
                           >
-                            <div className="w-2 h-2 bg-cinematic-gold rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
                             <span>{achievement}</span>
                           </motion.li>
                         ))}
@@ -167,7 +168,7 @@ export function ExperienceSection() {
           viewport={{ once: true }}
           className="mt-20 text-center"
         >
-          <h3 className="font-serif text-3xl md:text-4xl font-bold text-cinematic-gold mb-8">
+          <h3 className="font-serif text-3xl md:text-4xl font-bold text-yellow-400 mb-8">
             26 Film & TV Credits
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
@@ -179,7 +180,7 @@ export function ExperienceSection() {
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.05 }}
-                className="bg-gradient-to-br from-film-noir to-black p-4 rounded-lg border border-cinematic-gold/20 hover:border-cinematic-gold/60 transition-all duration-300"
+                className="bg-gradient-to-br from-film-noir to-black p-4 rounded-lg border border-yellow-400/20 hover:border-yellow-400/60 transition-all duration-300"
               >
                 <div className="text-sm font-semibold text-white mb-1">{title}</div>
                 <div className="text-xs text-gray-400">2nd AD</div>

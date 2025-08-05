@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden cinematic-gradient">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-black to-gray-900">
       {/* Film grain overlay */}
       <div className="absolute inset-0 film-grain opacity-20"></div>
       
@@ -16,7 +16,7 @@ export function HeroSection() {
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       >
-        <Film size={128} className="text-cinematic-gold" />
+        <Film size={128} className="text-yellow-400" />
       </motion.div>
       
       <motion.div 
@@ -24,7 +24,7 @@ export function HeroSection() {
         animate={{ rotate: -360 }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
       >
-        <Camera size={96} className="text-cinematic-gold" />
+        <Camera size={96} className="text-yellow-400" />
       </motion.div>
 
       {/* Main content */}
@@ -53,10 +53,10 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mb-8"
         >
-          <div className="text-xl md:text-2xl lg:text-3xl font-light text-cinematic-cream mb-4">
+          <div className="text-xl md:text-2xl lg:text-3xl font-light text-gray-100 mb-4">
             FROM FILM SETS TO CODE
           </div>
-          <div className="w-32 h-1 bg-gradient-to-r from-cinematic-gold to-cinematic-bronze mx-auto mb-8"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-8"></div>
         </motion.div>
 
         <motion.p
@@ -76,16 +76,16 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 1.6 }}
           className="flex flex-wrap justify-center gap-6 mb-12 text-sm md:text-base"
         >
-          <div className="flex items-center gap-2 text-cinematic-cream">
-            <MapPin size={16} className="text-cinematic-gold" />
+          <div className="flex items-center gap-2 text-gray-100">
+            <MapPin size={16} className="text-yellow-400" />
             <span>Kuala Lumpur, Malaysia</span>
           </div>
-          <div className="flex items-center gap-2 text-cinematic-cream">
-            <Mail size={16} className="text-cinematic-gold" />
+          <div className="flex items-center gap-2 text-gray-100">
+            <Mail size={16} className="text-yellow-400" />
             <span>gislerpaola@gmail.com</span>
           </div>
-          <div className="flex items-center gap-2 text-cinematic-cream">
-            <Phone size={16} className="text-cinematic-gold" />
+          <div className="flex items-center gap-2 text-gray-100">
+            <Phone size={16} className="text-yellow-400" />
             <span>+60184024695</span>
           </div>
         </motion.div>
@@ -98,7 +98,7 @@ export function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <Button 
-            variant="cinematic" 
+            variant="default" 
             size="lg"
             className="text-lg px-8 py-4"
             onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
@@ -132,12 +132,12 @@ export function HeroSection() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-cinematic-gold rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-yellow-400 rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-            className="w-1 h-3 bg-cinematic-gold rounded-full mt-2"
+            className="w-1 h-3 bg-yellow-400 rounded-full mt-2"
           ></motion.div>
         </motion.div>
       </motion.div>
