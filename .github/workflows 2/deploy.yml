@@ -2,7 +2,7 @@ name: Deploy Resume Website to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ version-4-clean-developer ]
   workflow_dispatch:
 
 permissions:
@@ -26,14 +26,14 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: 'CV/package-lock.json'
+          cache-dependency-path: 'Desktop/CV/package-lock.json'
 
       - name: Install dependencies
-        working-directory: ./CV
+        working-directory: ./Desktop/CV
         run: npm ci
 
       - name: Build Next.js app
-        working-directory: ./CV
+        working-directory: ./Desktop/CV
         run: npm run build
 
       - name: Setup Pages
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./CV/out
+          path: ./Desktop/CV/out
 
   deploy:
     environment:
