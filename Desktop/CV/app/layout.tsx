@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
-import { JetBrains_Mono } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
 const jetbrainsMono = JetBrains_Mono({ 
   subsets: ['latin'],
@@ -8,20 +13,20 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Paola Gisler | Developer & Automation Specialist',
-  description: 'Full-stack developer specializing in Python, Web3, and process automation. Building the future of decentralized applications.',
-  keywords: 'developer, python, web3, blockchain, automation, full-stack, cryptocurrency, defi',
+  title: 'Paola Gisler | Clean Developer Portfolio',
+  description: 'Creative technologist bridging film production and software development. Building elegant solutions with Python, Web3, and automation.',
+  keywords: 'developer, python, web3, blockchain, automation, full-stack, creative technologist, film production',
   authors: [{ name: 'Paola Gisler' }],
   openGraph: {
-    title: 'Paola Gisler | Developer & Automation Specialist',
-    description: 'Full-stack developer specializing in Python, Web3, and process automation.',
+    title: 'Paola Gisler | Clean Developer Portfolio',
+    description: 'Creative technologist bridging film production and software development.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Paola Gisler | Developer & Automation Specialist',
-    description: 'Full-stack developer specializing in Python, Web3, and process automation.',
+    title: 'Paola Gisler | Clean Developer Portfolio',
+    description: 'Creative technologist bridging film production and software development.',
   },
 }
 
@@ -32,8 +37,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${jetbrainsMono.variable} font-mono antialiased`}>
-        <div className="min-h-screen bg-gradient-to-br from-background via-background to-slate-950">
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+        <div className="min-h-screen">
           {children}
         </div>
       </body>
