@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Github, Linkedin, Send, Terminal, CheckCircle, AlertCircle } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -8,10 +8,17 @@ import { Button } from '@/components/ui/button'
 
 const contactInfo = [
   {
-    icon: Send,
-    label: "Contact",
-    value: "Available via contact form",
-    link: null,
+    icon: Github,
+    label: "GitHub",
+    value: "github.com/paolacodes1",
+    link: "https://github.com/paolacodes1",
+    color: "text-purple-400"
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn", 
+    value: "linkedin.com/in/paolagisler",
+    link: "https://www.linkedin.com/in/paolagisler",
     color: "text-blue-400"
   }
 ]
@@ -130,7 +137,7 @@ export default function ContactSection() {
                     {info.link ? (
                       <a 
                         href={info.link}
-                        target={info.link.startsWith('http') ? '_blank' : undefined}
+                        target={info.link?.startsWith('http') ? '_blank' : undefined}
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         {info.value}

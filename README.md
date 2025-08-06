@@ -1,9 +1,9 @@
-# 🌟 Paola Gisler - Resume Website Versions
+# 🌟 Paola G. - Resume Website Versions
 
 A collection of professional resume website designs showcasing different approaches to presenting a developer portfolio.
 
 ## 🚀 Live Site
-**Current Version**: https://gislerpaola.github.io/resume-website-versions/
+**Current Version**: https://paolacodes1.github.io/Resume/
 
 ## 📁 Repository Structure
 
@@ -47,8 +47,8 @@ Access different design versions via git branches:
 
 ## 🚀 Quick Start
 ```bash
-git clone https://github.com/gislerpaola/resume-website-versions.git
-cd resume-website-versions/CV
+git clone https://github.com/paolacodes1/Resume.git
+cd Resume/CV
 npm install
 npm run dev
 ```
@@ -63,9 +63,8 @@ The contact form uses Formspree. To set up your own:
 Automatically deploys to GitHub Pages on push to main branch via GitHub Actions.
 
 ## 📞 Contact
-- **Email**: gislerpaola@gmail.com
 - **LinkedIn**: [linkedin.com/in/paolagisler](https://www.linkedin.com/in/paolagisler)
-- **GitHub**: [github.com/gislerpaola](https://github.com/gislerpaola)
+- **GitHub**: [github.com/paolacodes1](https://github.com/paolacodes1)
 
 ---
-*Built with ❤️ and lots of ☕ by Paola Gisler*
+*Built with ❤️ and lots of ☕ by Paola G.*

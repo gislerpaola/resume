@@ -174,7 +174,7 @@ export function ManifestoSection() {
                 every person contributes, and every challenge is an opportunity to innovate."
               </blockquote>
               <cite className="text-yellow-400 font-semibold text-lg">
-                — Paola Gisler
+                — Paola G.
               </cite>
             </motion.div>
           </div>
@@ -200,7 +200,7 @@ export function ManifestoSection() {
               variant="default" 
               size="lg"
               className="text-lg px-8 py-4"
-              onClick={() => window.open('mailto:gislerpaola@gmail.com', '_blank')}
+              onClick={() => window.open('https://www.linkedin.com/in/paolagisler', '_blank')}
             >
               <Heart className="mr-2" size={20} />
               Start a Conversation

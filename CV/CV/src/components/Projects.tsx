@@ -177,7 +177,7 @@ export function Projects() {
 
                   <div className="flex items-center space-x-4 pt-4 border-t border-gray-100">
                     <motion.a
-                      href="https://github.com/gislerpaola"
+                      href="https://github.com/paolacodes1"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors duration-200"
@@ -201,7 +201,7 @@ export function Projects() {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 1 }}
         >
           <motion.a
-            href="https://github.com/gislerpaola"
+            href="https://github.com/paolacodes1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200"

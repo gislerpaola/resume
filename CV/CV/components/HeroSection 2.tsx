@@ -2,15 +2,15 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Terminal, Github, Linkedin, MapPin, Mail, Phone } from 'lucide-react'
+import { Terminal, Github, Linkedin, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const terminalLines = [
   { prompt: 'visitor@paola:~$', command: 'who_am_i', delay: 0 },
-  { prompt: '', command: 'Paola Gisler', delay: 800, color: 'text-white' },
+  { prompt: '', command: 'Paola G.', delay: 800, color: 'text-white' },
   { prompt: 'visitor@paola:~$', command: 'cat story.txt', delay: 1600 },
   { prompt: '', command: 'AI-Powered Builder & Creative Technologist', delay: 2400, color: 'text-white' },
-  { prompt: '', command: 'Location: Kuala Lumpur, Malaysia', delay: 2800, color: 'text-terminal-text' },
+  { prompt: '', command: 'Location: Available for remote opportunities', delay: 2800, color: 'text-terminal-text' },
   { prompt: '', command: 'From Film Sets → Operations → Building with AI', delay: 3200, color: 'text-terminal-text' },
   { prompt: 'visitor@paola:~$', command: 'ls skills/', delay: 4000 },
   { prompt: '', command: '→ Problem Solving', delay: 4400, color: 'text-terminal-yellow' },
@@ -132,7 +132,7 @@ export default function HeroSection() {
             variant="terminal" 
             size="lg"
             className="group hover:glow-border transition-all duration-300"
-            onClick={() => window.open('https://github.com/gislerpaola', '_blank')}
+            onClick={() => window.open('https://github.com/paolacodes1', '_blank')}
           >
             <Github className="w-4 h-4 mr-2 group-hover:animate-pulse" />
             View GitHub
@@ -167,16 +167,7 @@ export default function HeroSection() {
           className="flex flex-wrap justify-center gap-6 mt-6 text-sm text-muted-foreground"
         >
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-primary" />
-            <span>Kuala Lumpur, Malaysia</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Mail className="w-4 h-4 text-primary" />
-            <span>gislerpaola@gmail.com</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4 text-primary" />
-            <span>+60184024695</span>
+            <span>Available for remote opportunities</span>
           </div>
         </motion.div>
       </div>

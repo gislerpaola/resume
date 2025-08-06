@@ -20,7 +20,7 @@ const projects = [
       "Data from multiple sources (CoinMarketCap, CoinRanking)",
       "AI-generated interface with custom prompts"
     ],
-    github: "https://github.com/gislerpaola/crypto_tracker",
+    github: "https://github.com/paolacodes1/crypto_tracker",
     demo: null,
     status: "Active",
     stars: 0,
@@ -41,7 +41,7 @@ const projects = [
       "Polygon network Aave wallet support",
       "Local encrypted storage with password-derived keys"
     ],
-    github: "https://github.com/gislerpaola/aave_dashboard",
+    github: "https://github.com/paolacodes1/aave_dashboard",
     demo: null,
     status: "Active",
     stars: 0,
@@ -62,7 +62,7 @@ const projects = [
       "Selective item deletion and history clearing",
       "Standalone .app distribution"
     ],
-    github: "https://github.com/gislerpaola/clipboard_manager",
+    github: "https://github.com/paolacodes1/clipboard_manager",
     demo: null,
     status: "Active",
     stars: 0,

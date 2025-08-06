@@ -1,4 +1,4 @@
-# 📄 Dynamic Resume Website – Paola Gisler
+# 📄 Dynamic Resume Website – Paola G.
 
 This project is a dynamic, scroll-based resume site built using **Next.js**, **React**, **shadcn/ui**, and **Framer Motion**. The goal is to showcase transferable skills, a creative professional journey, and crypto/web3 aspirations in an immersive and interactive way.
 
@@ -146,6 +146,6 @@ If desired, future additions may include:
 
 ---
 
-### 📍 Author: Paola Gisler
+### 📍 Author: Paola G.
 
 Creative strategist turned coder, building at the intersection of storytelling, crypto, and tech.

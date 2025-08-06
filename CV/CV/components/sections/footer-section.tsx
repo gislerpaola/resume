@@ -23,7 +23,7 @@ export function FooterSection() {
           >
             <div>
               <h3 className="font-serif text-3xl font-bold text-yellow-400 mb-2">
-                Paola Gisler
+                Paola G.
               </h3>
               <p className="text-gray-300 text-lg">
                 From Film Sets to Code
@@ -32,20 +32,7 @@ export function FooterSection() {
             
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition-colors duration-300">
-                <MapPin size={18} className="text-yellow-400" />
-                <span>Kuala Lumpur, Malaysia</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition-colors duration-300">
-                <Mail size={18} className="text-yellow-400" />
-                <a href="mailto:gislerpaola@gmail.com" className="hover:underline">
-                  gislerpaola@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-gray-300 hover:text-yellow-400 transition-colors duration-300">
-                <Phone size={18} className="text-yellow-400" />
-                <a href="tel:+60184024695" className="hover:underline">
-                  +60184024695
-                </a>
+                <span>Available for remote opportunities</span>
               </div>
             </div>
           </motion.div>
@@ -113,18 +100,8 @@ export function FooterSection() {
                 asChild
                 className="border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300"
               >
-                <a href="https://github.com/gislerpaola" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/paolacodes1" target="_blank" rel="noopener noreferrer">
                   <Github size={20} />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                asChild
-                className="border-yellow-400/30 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300"
-              >
-                <a href="mailto:gislerpaola@gmail.com">
-                  <Mail size={20} />
                 </a>
               </Button>
             </div>
@@ -136,10 +113,10 @@ export function FooterSection() {
               <Button 
                 variant="default" 
                 className="w-full"
-                onClick={() => window.open('mailto:gislerpaola@gmail.com', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/paolagisler', '_blank')}
               >
                 <Heart className="mr-2" size={16} />
-                Get In Touch
+                Connect on LinkedIn
               </Button>
             </div>
           </motion.div>
@@ -157,7 +134,7 @@ export function FooterSection() {
         >
           <div className="flex items-center gap-2">
             <Film size={16} className="text-yellow-400" />
-            <span>© 2024 Paola Gisler. Crafted with passion and precision.</span>
+            <span>© 2024 Paola G. Crafted with passion and precision.</span>
           </div>
           
           <div className="flex items-center gap-1">

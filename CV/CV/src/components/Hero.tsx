@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, MapPin, Mail, Phone, Linkedin, Github } from 'lucide-react'
+import { ArrowDown, Linkedin, Github } from 'lucide-react'
 
 export function Hero() {
   const containerVariants = {
@@ -25,11 +25,8 @@ export function Hero() {
   }
 
   const contactItems = [
-    { icon: MapPin, text: 'Kuala Lumpur, Malaysia', href: null },
-    { icon: Mail, text: 'gislerpaola@gmail.com', href: 'mailto:gislerpaola@gmail.com' },
-    { icon: Phone, text: '+60184024695', href: 'tel:+60184024695' },
     { icon: Linkedin, text: 'linkedin.com/in/paolagisler', href: 'https://www.linkedin.com/in/paolagisler' },
-    { icon: Github, text: 'github.com/gislerpaola', href: 'https://github.com/gislerpaola' },
+    { icon: Github, text: 'github.com/paolacodes1', href: 'https://github.com/paolacodes1' },
   ]
 
   return (
@@ -44,7 +41,7 @@ export function Hero() {
           className="text-5xl md:text-7xl font-light text-gray-900 mb-8 tracking-tight"
           variants={itemVariants}
         >
-          Paola Gisler
+          Paola G.
         </motion.h1>
 
         <motion.p

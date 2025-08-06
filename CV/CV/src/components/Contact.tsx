@@ -2,31 +2,10 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from '@/src/components/hooks/useInView'
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react'
+import { Linkedin, Github, Send } from 'lucide-react'
 import { useState } from 'react'
 
 const contactMethods = [
-  {
-    icon: Mail,
-    label: 'Email',
-    value: 'gislerpaola@gmail.com',
-    href: 'mailto:gislerpaola@gmail.com',
-    description: 'Best way to reach me'
-  },
-  {
-    icon: Phone,
-    label: 'Phone',
-    value: '+60 18 402 4695',
-    href: 'tel:+60184024695',
-    description: 'Available during business hours'
-  },
-  {
-    icon: MapPin,
-    label: 'Location',
-    value: 'Kuala Lumpur, Malaysia',
-    href: null,
-    description: 'Open to remote opportunities'
-  },
   {
     icon: Linkedin,
     label: 'LinkedIn',
@@ -37,8 +16,8 @@ const contactMethods = [
   {
     icon: Github,
     label: 'GitHub',
-    value: 'github.com/gislerpaola',
-    href: 'https://github.com/gislerpaola',
+    value: 'github.com/paolacodes1',
+    href: 'https://github.com/paolacodes1',
     description: 'Code repositories & projects'
   }
 ]
@@ -61,12 +40,9 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject || 'Contact from Portfolio Website')
-    const body = encodeURIComponent(
-      `Hi Paola,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nBest regards,\n${formData.name}`
-    )
-    window.location.href = `mailto:gislerpaola@gmail.com?subject=${subject}&body=${body}`
+    // Contact form submission would need to be configured with a form service
+    alert('Please contact me through LinkedIn or GitHub for now.')
+    console.log('Contact form data:', formData)
   }
 
   const containerVariants = {
@@ -275,7 +251,7 @@ export function Contact() {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 1 }}
         >
           <p className="text-gray-500 text-sm">
-            © 2025 Paola Gisler. Built with Next.js, React, and Framer Motion.
+            © 2025 Paola G. Built with Next.js, React, and Framer Motion.
           </p>
         </motion.div>
       </div>

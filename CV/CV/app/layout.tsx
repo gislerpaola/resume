@@ -13,19 +13,19 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Paola Gisler | AI-Powered Builder & Creative Technologist',
+  title: 'Paola G. | AI-Powered Builder & Creative Technologist',
   description: 'From film sets to operations to building with AI. Creating solutions that bridge creativity, technology, and business impact.',
   keywords: 'AI builder, creative technologist, process automation, problem solver, film production, operations, business solutions',
-  authors: [{ name: 'Paola Gisler' }],
+  authors: [{ name: 'Paola G.' }],
   openGraph: {
-    title: 'Paola Gisler | AI-Powered Builder & Creative Technologist',
+    title: 'Paola G. | AI-Powered Builder & Creative Technologist',
     description: 'From film sets to operations to building with AI. Creating solutions that bridge creativity, technology, and business impact.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Paola Gisler | AI-Powered Builder & Creative Technologist',
+    title: 'Paola G. | AI-Powered Builder & Creative Technologist',
     description: 'From film sets to operations to building with AI. Creating solutions that bridge creativity, technology, and business impact.',
   },
 }

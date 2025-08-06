@@ -95,7 +95,7 @@ export default function HomePage() {
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold font-mono">P</span>
               </div>
-              <span className="font-sans font-bold gradient-text">Paola Gisler</span>
+              <span className="font-sans font-bold gradient-text">Paola G.</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -206,21 +206,14 @@ export default function HomePage() {
               <div className="w-8 h-8 bg-primary rounded-md flex items-center justify-center">
                 <span className="text-primary-foreground font-bold font-mono">P</span>
               </div>
-              <span className="font-sans font-bold gradient-text text-xl">Paola Gisler</span>
+              <span className="font-sans font-bold gradient-text text-xl">Paola G.</span>
             </div>
             <p className="text-muted-foreground mb-4 font-mono text-sm">
               Built with Next.js, React, Tailwind CSS, and Framer Motion
             </p>
             <div className="flex justify-center space-x-6 text-sm text-muted-foreground">
               <a 
-                href="mailto:gislerpaola@gmail.com"
-                className="hover:text-primary transition-colors"
-              >
-                gislerpaola@gmail.com
-              </a>
-              <span>•</span>
-              <a 
-                href="https://github.com/gislerpaola"
+                href="https://github.com/paolacodes1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
@@ -238,7 +231,7 @@ export default function HomePage() {
               </a>
             </div>
             <div className="mt-8 pt-8 border-t border-border text-xs text-muted-foreground font-mono">
-              <p>© 2024 Paola Gisler. All rights reserved.</p>
+              <p>© 2024 Paola G. All rights reserved.</p>
               <p className="mt-1">
                 <span className="text-primary">$</span> echo &quot;Always learning, always building&quot; 
                 <span className="animate-blink text-primary">|</span>

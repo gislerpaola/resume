@@ -2,37 +2,16 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Github, Linkedin, Send, Terminal, CheckCircle, AlertCircle } from 'lucide-react'
+import { Github, Linkedin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 const contactInfo = [
   {
-    icon: Mail,
-    label: "Email",
-    value: "gislerpaola@gmail.com",
-    link: "mailto:gislerpaola@gmail.com",
-    color: "text-blue-400"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+60184024695",
-    link: "tel:+60184024695",
-    color: "text-green-400"
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Kuala Lumpur, Malaysia",
-    link: null,
-    color: "text-yellow-400"
-  },
-  {
     icon: Github,
     label: "GitHub",
-    value: "github.com/gislerpaola",
-    link: "https://github.com/gislerpaola",
+    value: "github.com/paolacodes1",
+    link: "https://github.com/paolacodes1",
     color: "text-purple-400"
   },
   {
@@ -168,7 +147,7 @@ export default function ContactSection() {
             <Card className="glow-border">
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center">
-                  <Mail className="w-6 h-6 mr-3 text-primary" />
+                  <Send className="w-6 h-6 mr-3 text-primary" />
                   Send Message
                 </CardTitle>
                 <CardDescription>
@@ -280,10 +259,10 @@ export default function ContactSection() {
               <Button 
                 variant="outline" 
                 className="flex-1 group hover:border-primary hover:text-primary transition-all"
-                onClick={() => window.open('mailto:gislerpaola@gmail.com', '_blank')}
+                onClick={() => window.open('https://github.com/paolacodes1', '_blank')}
               >
-                <Mail className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                Direct Email
+                <Github className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+                GitHub
               </Button>
               <Button 
                 variant="outline" 

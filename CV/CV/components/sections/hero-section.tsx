@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Film, Camera, MapPin, Mail, Phone, Linkedin, Github } from "lucide-react"
+import { Film, Camera, Linkedin, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
@@ -37,14 +37,9 @@ export function HeroSection() {
         >
           <div className="flex flex-col items-center gap-4">
             <div className="text-center">
-              <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-4">
-                <span className="gold-shimmer bg-clip-text text-transparent">
-                  PAOLA
-                </span>
-              </h1>
               <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold">
                 <span className="gold-shimmer bg-clip-text text-transparent">
-                  GISLER
+                  PAOLA G.
                 </span>
               </h1>
             </div>
@@ -89,16 +84,7 @@ PROFESSIONAL PORTFOLIO
           className="flex flex-wrap justify-center gap-8 mb-12"
         >
           <div className="flex items-center gap-2 text-gray-100 bg-black/30 px-4 py-2 rounded-lg backdrop-blur-sm">
-            <MapPin size={20} className="text-yellow-400" />
-            <span className="text-base md:text-lg font-medium">Kuala Lumpur, Malaysia</span>
-          </div>
-          <div className="flex items-center gap-2 text-white bg-yellow-400/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-yellow-400/30">
-            <Mail size={20} className="text-yellow-400" />
-            <span className="text-base md:text-lg font-semibold">gislerpaola@gmail.com</span>
-          </div>
-          <div className="flex items-center gap-2 text-white bg-yellow-400/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-yellow-400/30">
-            <Phone size={20} className="text-yellow-400" />
-            <span className="text-base md:text-lg font-semibold">+60184024695</span>
+            <span className="text-base md:text-lg font-medium">Available for remote opportunities</span>
           </div>
         </motion.div>
 
@@ -126,7 +112,7 @@ PROFESSIONAL PORTFOLIO
               </a>
             </Button>
             <Button variant="outline" size="icon" asChild>
-              <a href="https://github.com/gislerpaola" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/paolacodes1" target="_blank" rel="noopener noreferrer">
                 <Github size={20} />
               </a>
             </Button>

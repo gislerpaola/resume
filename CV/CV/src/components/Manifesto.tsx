@@ -115,7 +115,7 @@ export function Manifesto() {
               with technical execution, human insight with digital innovation."
             </blockquote>
             <div className="w-16 h-0.5 bg-gray-400 mx-auto mb-4"></div>
-            <p className="text-gray-600 font-medium">Paola Gisler</p>
+            <p className="text-gray-600 font-medium">Paola G.</p>
           </div>
         </motion.div>
 
