@@ -166,17 +166,17 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 7 }}
           className="flex flex-wrap justify-center gap-4 mt-6"
         >
-          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-3 py-2 rounded-lg">
-            <MapPin className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Kuala Lumpur, Malaysia</span>
+          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-6 py-3 rounded-lg">
+            <MapPin className="w-5 h-5 text-primary" />
+            <span className="text-base font-medium">Kuala Lumpur, Malaysia</span>
           </div>
-          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded border border-gray-300 shadow-sm">
-            <Mail className="w-4 h-4 text-gray-600" />
-            <span className="text-sm font-medium text-gray-900">gislerpaola@gmail.com</span>
+          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-6 py-3 rounded-lg">
+            <Mail className="w-5 h-5 text-primary" />
+            <span className="text-base font-medium">gislerpaola@gmail.com</span>
           </div>
-          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded border border-gray-300 shadow-sm">
-            <Phone className="w-4 h-4 text-gray-600" />
-            <span className="text-sm font-medium text-gray-900">+60 184 024 695</span>
+          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-6 py-3 rounded-lg">
+            <Phone className="w-5 h-5 text-primary" />
+            <span className="text-base font-medium">+60 184 024 695</span>
           </div>
         </motion.div>
       </div>
