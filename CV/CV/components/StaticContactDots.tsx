@@ -9,7 +9,7 @@ export default function StaticContactDots() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 8 }}
+      transition={{ duration: 0.6, delay: 1 }}
       className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50"
     >
       <div className="flex flex-col items-center space-y-4">

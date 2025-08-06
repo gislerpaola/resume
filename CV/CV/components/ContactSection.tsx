@@ -27,20 +27,6 @@ const contactInfo = [
     value: "Kuala Lumpur, Malaysia",
     link: null,
     color: "text-yellow-400"
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    value: "github.com/gislerpaola",
-    link: "https://github.com/gislerpaola",
-    color: "text-purple-400"
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "linkedin.com/in/paolagisler",
-    link: "https://www.linkedin.com/in/paolagisler",
-    color: "text-cyan-400"
   }
 ]
 
@@ -289,25 +275,6 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            {/* Quick Contact Options */}
-            <div className="flex space-x-4 mt-6">
-              <Button 
-                variant="outline" 
-                className="flex-1 group hover:border-primary hover:text-primary transition-all"
-                onClick={() => window.open('mailto:gislerpaola@gmail.com', '_blank')}
-              >
-                <Mail className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                Direct Email
-              </Button>
-              <Button 
-                variant="outline" 
-                className="flex-1 group hover:border-primary hover:text-primary transition-all"
-                onClick={() => window.open('https://www.linkedin.com/in/paolagisler', '_blank')}
-              >
-                <Linkedin className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-                LinkedIn
-              </Button>
-            </div>
           </motion.div>
         </div>
       </div>
