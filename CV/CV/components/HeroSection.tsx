@@ -131,30 +131,30 @@ export default function HeroSection() {
           <Button 
             variant="terminal" 
             size="lg"
-            className="group hover:glow-border transition-all duration-300"
+            className="group hover:glow-border transition-all duration-300 px-6 py-3 text-base"
             onClick={() => window.open('https://github.com/gislerpaola', '_blank')}
           >
-            <Github className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+            <Github className="w-5 h-5 mr-3 group-hover:animate-pulse" />
             View GitHub
           </Button>
           
           <Button 
             variant="outline" 
             size="lg"
-            className="group border-terminal-border hover:border-primary hover:glow-border transition-all duration-300"
+            className="group border-terminal-border hover:border-primary hover:glow-border transition-all duration-300 px-6 py-3 text-base"
             onClick={() => window.open('https://www.linkedin.com/in/paolagisler', '_blank')}
           >
-            <Linkedin className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+            <Linkedin className="w-5 h-5 mr-3 group-hover:animate-pulse" />
             LinkedIn
           </Button>
           
           <Button 
             variant="outline" 
             size="lg"
-            className="group border-terminal-border hover:border-primary hover:glow-border transition-all duration-300"
+            className="group border-terminal-border hover:border-primary hover:glow-border transition-all duration-300 px-6 py-3 text-base"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            <Mail className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+            <Mail className="w-5 h-5 mr-3 group-hover:animate-pulse" />
             Get In Touch
           </Button>
         </motion.div>
@@ -170,13 +170,13 @@ export default function HeroSection() {
             <MapPin className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium">Kuala Lumpur, Malaysia</span>
           </div>
-          <div className="flex items-center gap-2 bg-gradient-to-r from-primary/10 to-primary/5 px-3 py-2 rounded-lg border border-primary/20">
-            <Mail className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">gislerpaola@gmail.com</span>
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded border border-gray-300 shadow-sm">
+            <Mail className="w-4 h-4 text-gray-600" />
+            <span className="text-sm font-medium text-gray-900">gislerpaola@gmail.com</span>
           </div>
-          <div className="flex items-center gap-2 bg-gradient-to-r from-primary/10 to-primary/5 px-3 py-2 rounded-lg border border-primary/20">
-            <Phone className="w-4 h-4 text-primary" />
-            <span className="text-sm font-semibold text-primary">+60184024695</span>
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded border border-gray-300 shadow-sm">
+            <Phone className="w-4 h-4 text-gray-600" />
+            <span className="text-sm font-medium text-gray-900">+60 184 024 695</span>
           </div>
         </motion.div>
       </div>
