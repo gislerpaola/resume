@@ -54,7 +54,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2 rounded-full font-semibold text-lg md:text-xl tracking-wider"
             >
-              CURRÍCULO PROFISSIONAL
+PROFESSIONAL PORTFOLIO
             </motion.div>
           </div>
         </motion.div>

@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 
 const terminalLines = [
   { prompt: 'visitor@paola:~$', command: 'who_am_i', delay: 0 },
-  { prompt: '', command: 'Paola Gisler', delay: 800, color: 'text-white' },
+  { prompt: '', command: 'Paola Gisler - Professional Portfolio', delay: 800, color: 'text-white' },
   { prompt: 'visitor@paola:~$', command: 'cat story.txt', delay: 1600 },
   { prompt: '', command: 'AI-Powered Builder & Creative Technologist', delay: 2400, color: 'text-white' },
   { prompt: '', command: 'Location: Kuala Lumpur, Malaysia', delay: 2800, color: 'text-terminal-text' },
@@ -164,19 +164,19 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 7 }}
-          className="flex flex-wrap justify-center gap-6 mt-6 text-sm text-muted-foreground"
+          className="flex flex-wrap justify-center gap-4 mt-6"
         >
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-3 py-2 rounded-lg">
             <MapPin className="w-4 h-4 text-primary" />
-            <span>Kuala Lumpur, Malaysia</span>
+            <span className="text-sm font-medium">Kuala Lumpur, Malaysia</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 bg-gradient-to-r from-primary/10 to-primary/5 px-3 py-2 rounded-lg border border-primary/20">
             <Mail className="w-4 h-4 text-primary" />
-            <span>gislerpaola@gmail.com</span>
+            <span className="text-sm font-semibold text-primary">gislerpaola@gmail.com</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 bg-gradient-to-r from-primary/10 to-primary/5 px-3 py-2 rounded-lg border border-primary/20">
             <Phone className="w-4 h-4 text-primary" />
-            <span>+60184024695</span>
+            <span className="text-sm font-semibold text-primary">+60184024695</span>
           </div>
         </motion.div>
       </div>
