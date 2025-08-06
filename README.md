@@ -3,7 +3,7 @@
 A collection of professional resume website designs showcasing different approaches to presenting a developer portfolio.
 
 ## 🚀 Live Site
-**Current Version**: https://paolacodes1.github.io/Resume/
+**Current Version**: https://paolacodes1.github.io/resume/
 
 ## 📁 Repository Structure
 
@@ -47,8 +47,8 @@ Access different design versions via git branches:
 
 ## 🚀 Quick Start
 ```bash
-git clone https://github.com/paolacodes1/Resume.git
-cd Resume/CV
+git clone https://github.com/paolacodes1/resume.git
+cd resume/CV
 npm install
 npm run dev
 ```

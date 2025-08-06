@@ -44,3 +44,6 @@ Thumbs.db
 *.png
 *.jpg
 *.jpeg
+
+# Private documentation - DO NOT UPLOAD
+../../PRIVATE_PROJECT_NOTES.md

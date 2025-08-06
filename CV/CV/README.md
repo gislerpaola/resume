@@ -6,4 +6,4 @@ This branch contains the enhanced version 4 of Paola G.'s resume website with:
 - Configured for GitHub Pages deployment
 - Automated deployment via GitHub Actions
 
-Live site: https://paolacodes1.github.io/Resume/
+Live site: https://paolacodes1.github.io/resume/
