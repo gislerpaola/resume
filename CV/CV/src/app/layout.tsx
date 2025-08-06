@@ -5,19 +5,19 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Paola Gisler - Creative Technologist',
+  title: 'Paola G - Creative Technologist',
   description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
-  keywords: ['Paola Gisler', 'Creative Technologist', 'Python', 'Web3', 'Film Production', 'Operations'],
-  authors: [{ name: 'Paola Gisler' }],
+  keywords: ['Paola G', 'Creative Technologist', 'Python', 'Web3', 'Film Production', 'Operations'],
+  authors: [{ name: 'Paola G' }],
   openGraph: {
-    title: 'Paola Gisler - Creative Technologist',
+    title: 'Paola G - Creative Technologist',
     description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Paola Gisler - Creative Technologist',
+    title: 'Paola G - Creative Technologist',
     description: 'Creative background → film AD → operations/BPO → learning Python/Web3. Problem solver, process optimizer, building at intersection of storytelling, crypto, and tech.',
   },
 }

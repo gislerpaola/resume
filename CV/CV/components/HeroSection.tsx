@@ -7,17 +7,16 @@ import { Button } from '@/components/ui/button'
 
 const terminalLines = [
   { prompt: 'visitor@paola:~$', command: 'who_am_i', delay: 0 },
-  { prompt: '', command: 'Paola Gisler - Professional Portfolio', delay: 800, color: 'text-white' },
+  { prompt: '', command: 'Paola G - Professional Portfolio', delay: 800, color: 'text-white' },
   { prompt: 'visitor@paola:~$', command: 'cat story.txt', delay: 1600 },
   { prompt: '', command: 'AI-Powered Builder & Creative Technologist', delay: 2400, color: 'text-white' },
-  { prompt: '', command: 'Location: Kuala Lumpur, Malaysia', delay: 2800, color: 'text-terminal-text' },
-  { prompt: '', command: 'From Film Sets → Operations → Building with AI', delay: 3200, color: 'text-terminal-text' },
-  { prompt: 'visitor@paola:~$', command: 'ls skills/', delay: 4000 },
-  { prompt: '', command: '→ Problem Solving', delay: 4400, color: 'text-terminal-yellow' },
-  { prompt: '', command: '→ Process Automation', delay: 4600, color: 'text-terminal-yellow' },
-  { prompt: '', command: '→ AI-Assisted Building', delay: 4800, color: 'text-terminal-yellow' },
-  { prompt: '', command: '→ Creative Solutions', delay: 5000, color: 'text-terminal-yellow' },
-  { prompt: 'visitor@paola:~$', command: '', delay: 5500, cursor: true },
+  { prompt: '', command: 'From Film Sets → Operations → Building with AI', delay: 2800, color: 'text-terminal-text' },
+  { prompt: 'visitor@paola:~$', command: 'ls skills/', delay: 3600 },
+  { prompt: '', command: '→ Problem Solving', delay: 4000, color: 'text-terminal-yellow' },
+  { prompt: '', command: '→ Process Automation', delay: 4200, color: 'text-terminal-yellow' },
+  { prompt: '', command: '→ AI-Assisted Building', delay: 4400, color: 'text-terminal-yellow' },
+  { prompt: '', command: '→ Creative Solutions', delay: 4600, color: 'text-terminal-yellow' },
+  { prompt: 'visitor@paola:~$', command: '', delay: 5100, cursor: true },
 ]
 
 interface TerminalLineProps {
@@ -159,26 +158,6 @@ export default function HeroSection() {
           </Button>
         </motion.div>
 
-        {/* Quick Info */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 7 }}
-          className="flex flex-wrap justify-center gap-4 mt-6"
-        >
-          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-6 py-3 rounded-lg">
-            <MapPin className="w-5 h-5 text-primary" />
-            <span className="text-base font-medium">Kuala Lumpur, Malaysia</span>
-          </div>
-          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-6 py-3 rounded-lg">
-            <Mail className="w-5 h-5 text-primary" />
-            <span className="text-base font-medium">gislerpaola@gmail.com</span>
-          </div>
-          <div className="flex items-center gap-2 bg-black/5 dark:bg-white/5 px-6 py-3 rounded-lg">
-            <Phone className="w-5 h-5 text-primary" />
-            <span className="text-base font-medium">+60 184 024 695</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

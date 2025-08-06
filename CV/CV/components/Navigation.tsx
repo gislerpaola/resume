@@ -70,7 +70,7 @@ export function Navigation() {
             >
               <Film className="w-6 h-6 text-yellow-400" />
               <span className="font-serif text-xl font-bold text-white">
-                Paola Gisler
+                Paola G
               </span>
             </motion.div>
 
@@ -111,7 +111,7 @@ export function Navigation() {
           >
             <Film className="w-6 h-6 text-yellow-400" />
             <span className="font-serif text-lg font-bold text-white">
-              Paola Gisler
+              Paola G
             </span>
           </motion.div>
 

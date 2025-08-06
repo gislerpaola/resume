@@ -8,25 +8,11 @@ import { Button } from '@/components/ui/button'
 
 const contactInfo = [
   {
-    icon: Mail,
-    label: "Email",
-    value: "gislerpaola@gmail.com",
-    link: "mailto:gislerpaola@gmail.com",
-    color: "text-blue-400"
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+60184024695",
-    link: "tel:+60184024695",
-    color: "text-green-400"
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: "Kuala Lumpur, Malaysia",
+    icon: Send,
+    label: "Contact",
+    value: "Available via contact form",
     link: null,
-    color: "text-yellow-400"
+    color: "text-blue-400"
   }
 ]
 
