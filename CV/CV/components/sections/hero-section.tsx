@@ -35,16 +35,28 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.2 }}
           className="mb-8"
         >
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-4">
-            <span className="gold-shimmer bg-clip-text text-transparent">
-              PAOLA
-            </span>
-          </h1>
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-8">
-            <span className="gold-shimmer bg-clip-text text-transparent">
-              GISLER
-            </span>
-          </h1>
+          <div className="flex flex-col items-center gap-4">
+            <div className="text-center">
+              <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold mb-4">
+                <span className="gold-shimmer bg-clip-text text-transparent">
+                  PAOLA
+                </span>
+              </h1>
+              <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold">
+                <span className="gold-shimmer bg-clip-text text-transparent">
+                  GISLER
+                </span>
+              </h1>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2 rounded-full font-semibold text-lg md:text-xl tracking-wider"
+            >
+              CURRÍCULO PROFISSIONAL
+            </motion.div>
+          </div>
         </motion.div>
 
         <motion.div
@@ -74,19 +86,19 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
-          className="flex flex-wrap justify-center gap-6 mb-12 text-sm md:text-base"
+          className="flex flex-wrap justify-center gap-8 mb-12"
         >
-          <div className="flex items-center gap-2 text-gray-100">
-            <MapPin size={16} className="text-yellow-400" />
-            <span>Kuala Lumpur, Malaysia</span>
+          <div className="flex items-center gap-2 text-gray-100 bg-black/30 px-4 py-2 rounded-lg backdrop-blur-sm">
+            <MapPin size={20} className="text-yellow-400" />
+            <span className="text-base md:text-lg font-medium">Kuala Lumpur, Malaysia</span>
           </div>
-          <div className="flex items-center gap-2 text-gray-100">
-            <Mail size={16} className="text-yellow-400" />
-            <span>gislerpaola@gmail.com</span>
+          <div className="flex items-center gap-2 text-white bg-yellow-400/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-yellow-400/30">
+            <Mail size={20} className="text-yellow-400" />
+            <span className="text-base md:text-lg font-semibold">gislerpaola@gmail.com</span>
           </div>
-          <div className="flex items-center gap-2 text-gray-100">
-            <Phone size={16} className="text-yellow-400" />
-            <span>+60184024695</span>
+          <div className="flex items-center gap-2 text-white bg-yellow-400/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-yellow-400/30">
+            <Phone size={20} className="text-yellow-400" />
+            <span className="text-base md:text-lg font-semibold">+60184024695</span>
           </div>
         </motion.div>
 

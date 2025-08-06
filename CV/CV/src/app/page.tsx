@@ -5,6 +5,7 @@ import ProjectsSection from '@/components/ProjectsSection'
 import { ManifestoSection } from '@/components/sections/manifesto-section'
 import ContactSection from '@/components/ContactSection'
 import { Navigation } from '@/components/Navigation'
+import FloatingContactButton from '@/components/FloatingContactButton'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProjectsSection />
       <ManifestoSection />
       <ContactSection />
+      <FloatingContactButton />
     </main>
   )
 }
