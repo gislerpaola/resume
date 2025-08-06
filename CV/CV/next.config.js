@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/resume-website-versions',
-  assetPrefix: '/resume-website-versions',
+  basePath: '/resume',
+  assetPrefix: '/resume',
   images: {
     unoptimized: true,
     domains: ['github.com', 'avatars.githubusercontent.com'],
